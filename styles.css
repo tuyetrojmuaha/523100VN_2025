@@ -122,6 +122,21 @@
   gap:6px;
   align-items:center;
 }
+.main-nav {
+  background: #fff;
+  border-top: 1px solid #f7edf6;
+  border-bottom: 1px solid #f7edf6;
+
+  position: fixed;   /* luôn cố định */
+  top: 0;
+  left: 0;
+  width: 100%;       /* phủ ngang toàn trang */
+  z-index: 1000;     /* nổi trên các phần khác */
+}
+
+body {
+  padding-top: 60px; /* bằng chiều cao nav để nội dung không bị che */
+}
 .nav-item.home{ font-size:18px; color:var(--aeon-pink); }
 
 /* BANNER SECTION */
