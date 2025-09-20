@@ -1,0 +1,83 @@
+/* Vùng tuyển dụng */
+.recruitment-section {
+  background: #f8f9fa; /* Nền xám nhạt */
+  border-radius: 10px;
+}
+
+.recruitment-img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Nút hồng đặc trưng AEON */
+.btn-recruitment {
+  background-color: #e4007f;
+  color: #fff;
+  padding: 12px 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-recruitment:hover {
+  background-color: #b10063;
+  color: #fff;
+}
+
+/* Màu chủ đạo AEON */
+.text-pink {
+  color: #AA0061;
+}
+.bg-pink {
+  background-color: #AA0061;
+}
+.btn-pink {
+  background-color: #AA0061;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.btn-pink:hover {
+  background-color: #88004E;
+  color: white;
+}
+.btn-outline-pink {
+  border: 2px solid #AA0061;
+  color: #AA0061;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.btn-outline-pink:hover {
+  background-color: #AA0061;
+  color: white;
+}
+
+/* Card liên hệ */
+.contact-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px 20px;
+  border: 1px solid #eee;
+}
+.small-card {
+  min-height: 120px;
+}
+
+/* Hình minh họa bên phải */
+.illustration-card {
+  background: #fdeaf3;
+  border-radius: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .btn-pink, .btn-outline-pink {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}

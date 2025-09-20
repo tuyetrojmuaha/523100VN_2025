@@ -1,0 +1,432 @@
+
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+    }
+
+    header img.logo {
+      height: 40px;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      padding: 5px 15px;
+      width: 350px;
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      flex: 1;
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    .search-bar i {
+      color: #d63384;
+      font-size: 18px;
+    }
+
+    /* Nút tìm AEON gần bạn */
+    .find-btn {
+      background: #d63384;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .find-btn:hover {
+      background: #b3266b;
+    }
+
+    /* Menu chính */
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      z-index: 10;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #d63384;
+    }
+
+    /* Submenu */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      min-width: 200px;
+      border-radius: 5px;
+      z-index: 20;
+    }
+
+    nav ul li ul li a {
+      padding: 10px 15px;
+      font-size: 14px;
+      color: #555;
+      display: block;
+    }
+
+    nav ul li ul li a:hover {
+      background: #fdf2f8;
+      color: #d63384;
+    }
+
+    /* Hover vào mục cha thì hiện menu con */
+    nav ul li:hover > ul {
+      display: block;
+    }
+
+    /* Mũi tên chỉ xuống */
+    nav ul li a .arrow {
+      font-size: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    /* Khi hover vào menu chính, mũi tên xoay */
+    nav ul li:hover a .arrow {
+      transform: rotate(180deg);
+    }
+
+    /* Banner container */
+    .banner-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: #fdf2f8;
+    }
+
+    /* Banner trái - Slider */
+    .banner-left {
+      width: 70%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    /* Nút điều hướng trái/phải */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Dấu chấm indicator */
+    .dots {
+      text-align: center;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      background-color: #ddd;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dot.active {
+      background-color: #d63384;
+    }
+
+    /* Banner bên phải */
+    .banner-right {
+      width: 28%;
+      background: #ffccdf;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .banner-right h2 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .banner-right a {
+      background: #d63384;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .banner-right a:hover {
+      background: #b3266b;
+    }
+
+    /* Nút cuộn lên đầu */
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #d63384;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .scroll-top:hover {
+      background: #b3266b;
+    }
+    /* Section 2 cột */
+.content-slider-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background: #fff5f8;
+  gap: 30px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+/* Nội dung bên trái */
+.content-left {
+  width: 45%;
+}
+
+.content-left h2 {
+  font-size: 28px;
+  color: #d63384;
+  margin-bottom: 15px;
+}
+
+.content-left p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #d63384;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: #b3266b;
+}
+
+/* Slider bên phải */
+.slider-right {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides2 {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slides2 img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+/* Nút điều hướng */
+.prev2, .next2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.prev2 {
+  left: 10px;
+}
+
+.next2 {
+  right: 10px;
+}
+
+/* Chấm điều hướng */
+.dots2 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot2 {
+  height: 10px;
+  width: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot2.active {
+  background-color: #d63384;
+}
+
+/* ===== Language Switcher ===== */
+.language-switcher {
+  margin: 0 15px;
+  position: relative;
+}
+
+.language-switcher select {
+  padding: 6px 14px;
+  border: 2px solid #AA0061; /* viền hồng */
+  border-radius: 20px; /* bo tròn */
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #AA0061; /* chữ màu hồng */
+  font-weight: 600;
+  appearance: none; /* ẩn style mặc định của trình duyệt */
+  transition: all 0.3s ease;
+}
+
+/* Khi hover */
+.language-switcher select:hover {
+  background-color: #AA0061;
+  color: #fff; /* chữ trắng khi hover */
+}
+
+/* Hiệu ứng khi bấm vào */
+.language-switcher select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(170, 0, 97, 0.6);
+}
+
+/* ===== AEON Button with Icon ===== */
+.aeon-button {
+  background-color: #AA0061;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.aeon-button i {
+  font-size: 16px;
+}
+
+.aeon-button:hover {
+  background-color: #88004D;
+}
+
+

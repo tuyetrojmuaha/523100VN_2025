@@ -1,0 +1,213 @@
+/* ===== Khuyến mãi & Sự kiện ===== */
+.promotion-section {
+  padding: 40px 0;
+  background-color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #AA0061; /* màu hồng đặc trưng AEON */
+  margin-bottom: 30px;
+}
+
+/* Grid 4 ảnh ngang */
+.promotion-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.promo-item {
+  flex: 1 1 calc(25% - 20px);
+  max-width: 280px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ảnh dài */
+.promo-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.promo-image img {
+  width: 100%;
+  height: 300px; /* chiều cao cố định */
+  object-fit: cover; /* ảnh tự căn chỉnh */
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+
+/* Hover vào ảnh phóng to nhẹ */
+.promo-image:hover img {
+  transform: scale(1.08);
+}
+
+/* Nội dung hiện khi hover */
+.promo-content {
+  position: absolute;
+  bottom: -100%; /* ẩn hoàn toàn lúc đầu */
+  left: 0;
+  width: 100%;
+  background: rgba(170, 0, 97, 0.9); /* nền hồng trong suốt */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 0 0 12px 12px;
+  transition: bottom 0.4s ease;
+}
+
+.promo-content h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.promo-content p {
+  font-size: 14px;
+}
+
+/* Khi hover vào ảnh, nội dung trượt lên */
+.promo-image:hover .promo-content {
+  bottom: 0;
+}
+
+/* Nút "Xem thêm" */
+.text-center {
+  text-align: center;
+}
+
+.btn-more {
+  background-color: #AA0061;
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-more:hover {
+  background-color: #88004D;
+  transform: translateY(-2px);
+}
+
+
+
+/* ===== Dịch vụ tiện ích ===== */
+.service-section {
+  padding: 50px 0;
+  background: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #AA0061; /* Màu hồng đặc trưng AEON */
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ===== Dịch vụ tiện ích ===== */
+.service-section {
+  padding: 50px 0;
+  background: #fff;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+/* Ô dịch vụ */
+.service-item {
+  text-align: center;
+  max-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Ảnh dịch vụ */
+.service-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.service-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Giữ nguyên tỷ lệ, không bị cắt */
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-image img {
+  transform: scale(1.05); /* Zoom nhẹ khi hover */
+}
+
+/* Chữ dịch vụ */
+.service-text {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Nút xem thêm */
+.text-center.mt-4 {
+  margin-top: 50px; /* Tăng khoảng cách giữa grid và nút */
+}
+
+.btn-more {
+  background-color: #AA0061;
+  color: #fff;
+  border: none;
+  padding: 12px 32px; 
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-more:hover {
+  background-color: #88004D;
+  transform: translateY(-2px);
+}
+
+

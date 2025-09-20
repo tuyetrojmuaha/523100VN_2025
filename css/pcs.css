@@ -1,0 +1,296 @@
+.lifestyle-section {
+  padding: 50px 0;
+  background: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #AA0061;
+}
+
+/* ===== Slider ===== */
+.lifestyle-slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.lifestyle-slider .slide {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.lifestyle-slider img {
+  width: 250px;
+  border-radius: 12px;
+  transition: all 0.8s ease;
+}
+
+/* Animation - tự động chạy vòng lặp */
+@keyframes sliderAnimation {
+  0%   { transform: translateX(-250px) scale(0.8); opacity: 0.5; z-index: 1; }
+  20%  { transform: translateX(0) scale(1.2); opacity: 1; z-index: 3; } /* Ảnh giữa */
+  40%  { transform: translateX(250px) scale(0.8); opacity: 0.5; z-index: 1; }
+  60%  { opacity: 0; }
+  100% { transform: translateX(-250px) scale(0.8); opacity: 0.5; z-index: 1; }
+}
+
+/* Mỗi ảnh lệch nhau thời gian */
+.lifestyle-slider .slide:nth-child(1) {
+  animation: sliderAnimation 12s infinite;
+}
+
+.lifestyle-slider .slide:nth-child(2) {
+  animation: sliderAnimation 12s infinite 3s;
+}
+
+.lifestyle-slider .slide:nth-child(3) {
+  animation: sliderAnimation 12s infinite 6s;
+}
+
+.lifestyle-slider .slide:nth-child(4) {
+  animation: sliderAnimation 12s infinite 9s;
+}
+
+/* ===== Nút Khám phá và nút màu hồng ===== */
+.btn-pink {
+  background-color: #AA0061;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-pink:hover {
+  background-color: #88004D;
+}
+
+/* Tiêu đề phần tin tức */
+.text-pink {
+  color: var(--pink);
+}
+
+/* Card tin tức */
+.news-card {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.news-card:hover {
+  background: var(--pink-light);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Hình ảnh trong card */
+.news-img {
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.news-card:hover .news-img {
+  transform: scale(1.05);
+}
+
+/* Tiêu đề tin tức */
+.news-title {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-top: 5px;
+  color: #333;
+}
+
+.news-title:hover {
+  color: var(--pink);
+}
+
+/* Phân trang */
+.pagination-custom {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid var(--pink);
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--pink);
+  background: #fff;
+}
+
+/* Danh sách bản tin tóm tắt */
+.highlight-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.highlight-list li strong {
+  font-size: 14px;
+  color: #333;
+}
+
+.highlight-list li span {
+  font-size: 12px;
+}
+
+.highlight-list li:hover strong {
+  color: var(--pink);
+}
+
+/* Ảnh thương hiệu */
+section.bg-white img {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section.bg-white img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Nút hồng AEON */
+.btn-pink {
+  background: var(--pink);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 10px 20px;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.btn-pink:hover {
+  background: #c3006b;
+  color: #fff;
+}
+
+/* Danh sách siêu thị */
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding: 15px;
+  transition: background 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+  background: var(--pink-light);
+  cursor: pointer;
+}
+
+.list-group-item.active {
+  background: var(--pink);
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.list-group-item.active p,
+.list-group-item.active span {
+  color: white !important;
+}
+
+/* Ảnh tuyển dụng */
+section.bg-white img {
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+section.bg-white img:hover {
+  transform: scale(1.05);
+}
+
+/* Nội dung bên trái */
+section.bg-white p {
+  color: var(--gray-dark);
+  line-height: 1.6;
+}
+
+/* Container và section */
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+h4 {
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .news-img {
+    height: 150px;
+  }
+
+  .highlight-list li strong {
+    font-size: 13px;
+  }
+}
+
+
+/* Khung nền hồng đặc trưng */
+.camnang-box {
+  background: #e4007f; /* Màu hồng thương hiệu AEON */
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hiệu ứng hover */
+.camnang-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hình ảnh */
+.camnang-img {
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #fff;
+  padding: 5px;
+}
+
+/* Nút tìm hiểu ngay */
+.camnang-box .btn {
+  background: #fff;
+  color: #e4007f;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.camnang-box .btn:hover {
+  background: #c3006b;
+  color: #fff;
+}
+
+
+.pagination .page-link {
+  color: #e4007f;
+  border: none;
+}
+
+.pagination .page-link:hover {
+  background: #e4007f;
+  color: #fff;
+}
+
+.pagination .page-item.active .page-link {
+  background: #e4007f;
+  color: #fff;
+  border-radius: 50%;
+}
