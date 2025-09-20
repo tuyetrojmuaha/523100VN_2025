@@ -1,0 +1,58 @@
+(function ($) {
+  "use strict";
+
+  var __defaults = {
+      selector: '> a',
+      target: '.news-main > .container'
+  }
+
+  function AjaxPagination (element, options) {
+      this.$elm = $(element);
+      this.$elmSelector = this.getSelector(this.$elm);
+      this.$opt = $.extend({}, __defaults, options || {});
+      this.$nextLink = this.$elm.find(this.$opt.selector);
+      this.$target = $(this.$opt.target);
+
+      this.$elm.on('click', this.$opt.selector, this._load.bind(this));
+  }
+
+  AjaxPagination.prototype.getSelector = function (elm) {
+      return '.' + $(elm).attr('class').replace(/\s+/ig, '.');
+  }
+
+  AjaxPagination.prototype._load = function (e) {
+      e.preventDefault();
+
+      this.$elm.addClass('loading');
+      $.get(this.$nextLink.attr('href'), (function (response) {
+          var $response = $(response);
+          var $posts    = $(this.$opt.target + ' > *', $response);
+          var $nextLink = $(this.$elmSelector + ' ' + this.$opt.selector, $response)
+
+          if ($nextLink.length > 0) {
+              if (this.$nextLink.length > 0) {
+                  this.$nextLink.replaceWith($nextLink);
+                  this.$nextLink = this.$elm.find(this.$opt.selector);
+              }
+          } else {
+              this.$elm.remove();
+          }
+
+          this.$target.append($posts);
+          this.$elm.removeClass('loading');
+      }).bind(this));
+  }
+
+  $.fn.ajaxPagination = function (options) {
+      return this.each(function () {
+          $(this).data('__ajaxPagination', new AjaxPagination(this, options));
+      })
+  };
+
+  $(function () {
+    $('.loadmore-box').each(function () {
+      $(this).ajaxPagination($(this).data('options'))
+    });
+  });
+
+})(jQuery);

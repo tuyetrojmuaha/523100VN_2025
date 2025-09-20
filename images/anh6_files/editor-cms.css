@@ -1,0 +1,160 @@
+.content-detail .page-content {
+    color: #333;
+}
+.content-detail h1 {
+    font-size: 30px;
+}
+.content-detail h2 {
+    font-size: 24px;
+}
+.content-detail h3 {
+    font-size: 20px;
+}
+.content-detail h4 {
+    font-size: 16px;
+}
+.content-detail h5 {
+    font-size: 88%;
+}
+.content-detail h6 {
+    font-size: 12px;
+}
+.content-detail p {
+    font-size: 88%;
+}
+.content-detail a {
+    color: #b41f8e;
+}
+.content-detail em {
+    font-style: italic;
+}
+.content-detail em strong {
+    font-style: italic;
+}
+.content-detail strong {
+    font-weight: bold;
+}
+.content-detail blockquote {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+.content-detail ul, .content-detail ol {
+    font-size: 88%;
+    padding-left: 15px;
+}
+.content-detail ul li,
+.content-detail ol li {
+    list-style: unset;
+}
+.content-detail img.aligncenter {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.content-detail figure.aligncenter {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 15px;
+}
+.content-detail figure img {
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+.content-detail figure figcaption {
+    font-size: 80%;
+}
+.content-detail pre {
+    white-space: pre;
+}
+.content-detail table {
+    margin-bottom: 15px;
+}
+.content-detail td, .content-detail th {
+    border: 1px solid #000;
+    font-size: 88%;
+    padding: 8px;
+}
+/**/
+.content-detail #ez-toc-container {
+    width: 100%;
+    font-weight: 600;
+    color: #333;
+    border: none;
+    padding: 16px;
+    margin-top: 20px;
+    background: #f7f7f7;
+}
+.content-detail .ez-toc-title-toggle {
+    display: none;
+}
+.content-detail #ez-toc-container p.ez-toc-title {
+    font-weight: 700;
+    color: #333;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+}
+.content-detail #ez-toc-container p.ez-toc-title:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 6px;
+    width: 20px;
+    height: 14px;
+    background-image: url(../images/homenew/icon/icon-ls.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.content-detail .ez-toc-list {
+    font-size: 16px;
+}
+.content-detail #ez-toc-container ul.ez-toc-list-level-3 {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.content-detail #ez-toc-container ul li.ez-toc-heading-level-3 {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.content-detail #ez-toc-container a,
+.content-detail #ez-toc-container a:visited {
+    color: #333;
+}
+.ez-toc-title-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.ez-toc-title-container .ez-toc-title {
+    padding-left: 10px;
+}
+.content-detail .page-content h2,
+.content-detail .page-content h3,
+.content-detail .page-content h4,
+.content-detail .page-content h5,
+.content-detail .page-content h6 {
+    position: relative;
+}
+.content-detail .page-content h2 .ez-toc-section,
+.content-detail .page-content h3 .ez-toc-section,
+.content-detail .page-content h4 .ez-toc-section,
+.content-detail .page-content h5 .ez-toc-section,
+.content-detail .page-content h6 .ez-toc-section
+{
+    position: absolute;
+    top: -75px
+}
+#ez-toc-container .ez-toc-list-level-3 {
+    font-weight: 300;
+}
+
+@media screen and (min-width: 767px) {
+    .content-detail p {
+        font-size: 88%;
+    }
+    .content-detail #ez-toc-container {
+        padding: 20px;
+    }
+}
