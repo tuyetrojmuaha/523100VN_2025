@@ -1,0 +1,383 @@
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+.topbar { background:#f8f9fa; font-size:14px; }
+.hero img { height:390px; }
+.promo-card img { width:100%; height:160px; object-fit:cover; border-radius:8px; }
+.service-icon { width:72px; height:72px; display:flex; align-items:center; justify-content:center;
+                background:#fff; border-radius:12px; box-shadow:0 2px 6px rgba(0,0,0,.06); }
+footer { background:#0b2b3a; color:#dbecee; }
+.navbar .nav-link { color:#042a36; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+/* ===== Top Bar ===== */
+/* Nền full màn hình */
+.topbar, .subnav {
+  width: 100%;
+  background: #fff;
+}
+
+/* Giới hạn phần bên trong */
+.container-inner {
+  max-width: 1200px;          /* chiều rộng tối đa mong muốn */
+  margin: 0 auto;             /* căn giữa */
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Topbar riêng */
+.topbar .container-inner {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* Subnav riêng */
+.subnav {
+  border-top: 1px solid #f0f0f0; /* viền chạy full màn hình */
+}
+.subnav .container-inner {
+  justify-content: center;      /* menu nằm giữa */
+}
+.subnav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 10px 0;
+}
+.subnav li {
+  cursor: pointer;
+  color: #555;
+  font-size: 15px;
+}
+.subnav li:hover { color: #a02069; }
+
+
+.logo img {
+  height: 50px;
+}
+
+/* Tìm kiếm */
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  max-width: 550px;
+  margin: 0 30px;
+  background: #f7f7f7;
+  border-radius: 999px;
+  padding: 0 12px;
+}
+.search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px 12px;
+  font-size: 16px;
+  outline: none;
+}
+.search-box button {
+  border: none;
+  background: transparent;
+  color: #a02069;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Ngôn ngữ */
+.lang {
+  position: relative;
+  margin-right: 20px;
+}
+.lang-btn {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-size: 15px;
+  color: #a02069;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.lang-menu {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin: 6px 0 0;
+  padding: 0;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  display: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.lang-menu li {
+  padding: 8px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lang-menu li:hover { background: #f9f9f9; }
+.lang-menu li.active { color: #a02069; }
+
+/* Nút tìm AEON */
+.btn-find {
+  background: linear-gradient(90deg, #e43a84, #d233a2);
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 999px;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity .2s;
+}
+.btn-find:hover { opacity: 0.9; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-box { max-width: 300px; }
+  .btn-find { padding: 10px 20px; font-size: 14px; }
+  .subnav ul { gap: 15px; }
+}
+
+.subnav i.pink-icon {
+  color: #e43a84;            /* hồng chữ (có thể đổi #a02069) */
+  background: #ffffff;       /* nền trắng */    
+  padding: 6px;              /* khoảng trắng bên trong */
+  font-size: 15px;           /* kích cỡ icon */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    color: #000; /* Thay đổi màu icon thành màu đen */
+    font-size: 16px;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none; /* Vẫn giữ dòng này để ẩn icon mặc định */
+}
+.carousel-control-prev:hover i,
+.carousel-control-next:hover i {
+    color: #000;
+}
+/* Online Shopping Section */
+.online-shopping .title-online {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.online-shopping .title-online + p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.online-shopping .btn-pink {
+    background-color: #e43a84;
+    border-color: #e43a84;
+    font-weight: bold;
+    color: #fff;
+    transition: background-color 0.2s;
+}
+
+.online-shopping .btn-pink:hover {
+    background-color: #c72d73;
+    border-color: #c72d73;
+}
+
+.online-shopping .text-pink {
+    color: #e43a84;
+}
+
+.online-shopping .hotline-box {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.online-shopping .hotline-small-text {
+    font-size: 0.75rem;
+}
+/* Styles for Promotion & Events Section */
+/* Thêm khung viền cho ảnh khi di chuột vào */
+.promo-event-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.promo-event-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    transition: border-color 0.3s ease-in-out;
+    z-index: 1;
+}
+
+
+
+/* Tùy chỉnh style cho caption */
+.promo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    /* Thay đổi màu nền và chữ */
+    background-color: rgba(0, 0, 0, 0.9); /* Nền đen hơi trong suốt */
+    color: #fff; /* Chữ màu trắng */
+    
+    text-align: center;
+    padding: 10px;
+   font-family: Arial, sans-serif; /* Đổi font chữ thành Arial */
+    font-size: 18px; /* Chữ to hơn, có thể điều chỉnh theo ý muốn */
+    font-weight: bolder;
+    
+    transform: translateY(100%); /* Ẩn caption ban đầu */
+    transition: transform 0.3s ease-in-out; /* Hiệu ứng trượt lên */
+    z-index: 2;
+}
+
+.promo-event-card:hover .promo-caption {
+    transform: translateY(0); /* Hiển thị caption khi di chuột vào */
+}
+
+.promo-event-card:hover .promo-caption {
+    transform: translateY(0); /* Hiển thị caption khi di chuột vào */
+}
+.btn-pink {
+    background: linear-gradient(90deg, #e43a84, #d233a2);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: opacity .2s;
+}
+
+.btn-pink:hover {
+    opacity: 0.9;
+}
+/* Lifestyle Section */
+.lifestyle .btn-pink {
+    background: linear-gradient(90deg, #e43a84, #d233a2);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: opacity .2s;
+}
+
+.lifestyle .btn-pink:hover {
+    opacity: 0.9;
+}
+
+/* Tùy chỉnh riêng cho nút của carousel Phong cách sống */
+#lifestyleCarousel .carousel-control-prev,
+#lifestyleCarousel .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#lifestyleCarousel .carousel-control-prev { left: -15px; }
+#lifestyleCarousel .carousel-control-next { right: -15px; }
+/* Footer Section */
+.bg-dark-pink {
+    background-color: #b6198a;  
+}
+
+.footer-logo {
+    height: 60px;
+}
+
+.footer-badge {
+    height: 40px;
+}
+
+.footer-section p {
+    color: #ccc;
+}
+
+.footer-section a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.footer-section a:hover {
+    color: #e43a84;
+}
+
+/* Biểu tượng mạng xã hội */
+.social-icons a {
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s;
+}
+
+.social-icons a:hover {
+    background-color: #fff;
+    color: #791a82;
+}
