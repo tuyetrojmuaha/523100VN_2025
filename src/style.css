@@ -1,0 +1,224 @@
+/* Màu chủ đạo */
+:root {
+  --aeon-pink: #e6007e;
+  --aeon-gray: #f8f9fa;
+}
+
+/* Header */
+.header {
+  background: #fff;
+}
+.logo {
+  height: 40px;
+  margin-right: 12px;
+}
+.logo-subtitle {
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: 500;
+}
+.btn-pink, .btn-outline-pink {
+  background: var(--aeon-pink);
+  color: #fff;
+  border: none;
+}
+.btn-outline-pink {
+  background: transparent;
+  color: var(--aeon-pink);
+  border: 1px solid var(--aeon-pink);
+}
+.btn-pink:hover, .btn-outline-pink:hover {
+  background: #c2006a;
+  color: #fff;
+}
+.menu .navbar-nav {
+  flex-direction: row !important;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.2rem;
+}
+.menu .nav-item {
+  flex: 0 0 auto;
+}
+.menu .nav-link {
+  color: #555;
+  font-size: 1rem;
+  padding: 0.35rem 1rem !important;
+  border-radius: 2rem !important;
+  margin: 0 0.1rem;
+  min-width: unset;
+  box-shadow: none;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+}
+.menu .nav-link.active {
+  background: #fde7f3;
+  color: #b8005a;
+  font-weight: 500;
+}
+.menu .nav-link:hover {
+  background: #fde7f3;
+  color: #b8005a;
+  font-weight: 500;
+}
+.menu .nav-link.rounded-pill {
+  border-radius: 2rem !important;
+}
+.menu .nav-link i {
+  font-size: 1rem;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  align-items: center;
+}
+.search-box input {
+  border-radius: 20px 0 0 20px;
+  border-right: none;
+}
+.search-box .btn {
+  border-radius: 0 20px 20px 0;
+  background: var(--aeon-pink);
+  color: #fff;
+  border: none;
+}
+
+/* Event Card */
+.event-card {
+  aspect-ratio: 3/4;
+  min-height: 320px;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.event-card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+.event-card .event-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.2rem;
+  color: #fff;
+}
+.event-card:hover .event-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Service Card */
+.service-card {
+  min-height: 160px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s, background 0.2s;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card 1: Thanh toán không tiền mặt */
+.service-card:nth-of-type(1) {
+  background: linear-gradient(135deg, #fde7f3 60%, #fff 100%);
+}
+
+/* Card 2: Mua sắm online */
+.service-card:nth-of-type(2) {
+  background: linear-gradient(135deg, #f3faff 60%, #fff 100%);
+}
+
+/* Card 3: Giao hàng và lắp đặt */
+.service-card:nth-of-type(3) {
+  background: linear-gradient(135deg, #fde7f3 60%, #fff 100%);
+}
+
+.service-card:hover {
+  box-shadow: 0 4px 24px rgba(230,0,126,0.10);
+}
+
+/* Section title */
+.section-title {
+  color: var(--aeon-pink);
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Footer */
+.footer {
+  background: var(--aeon-gray);
+  padding: 2rem 0;
+  color: #555;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.lifestyle-section .carousel-inner img {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s;
+}
+.lifestyle-section .carousel-inner img:hover {
+  transform: scale(1.04);
+}
+
+.news-section .card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+.news-section .card {
+  border-radius: 1rem;
+}
+.news-section .bg-light {
+  background: #ffe6f0 !important;
+}
+.text-pink {
+  color: var(--aeon-pink) !important;
+}
+.brand-card {
+  border: 1px solid #eee;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+}
+.brand-card:hover {
+  box-shadow: 0 4px 24px rgba(230,0,126,0.10);
+  border-color: var(--aeon-pink);
+}
+.brand-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: var(--aeon-pink);
+  font-weight: bold;
+  font-size: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.brand-card:hover .brand-overlay,
+.brand-card .brand-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.border-pink {
+  border: 2px solid var(--aeon-pink) !important;
+}

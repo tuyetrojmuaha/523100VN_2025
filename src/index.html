@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aeon VN - Trang Chủ (Demo)</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- CSS riêng -->
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+ <!-- Header -->
+  <header class="header shadow-sm">
+    <div class="container d-flex align-items-center justify-content-between py-2">
+
+      <!-- Logo -->
+      <div class="header-left d-flex align-items-center">
+        <img src="logo_vi.svg" alt="Aeon Logo" class="logo">
+      </div>
+
+      <!-- Search -->
+      <div class="header-center flex-grow-1 px-4">
+        <div class="search-box">
+          <input type="text" class="form-control" placeholder="Nhập nội dung tìm kiếm">
+          <button class="btn"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+
+      <!-- Language + Button -->
+      <div class="header-right d-flex align-items-center gap-3">
+        <div class="dropdown">
+          <button class="btn btn-lang dropdown-toggle" data-bs-toggle="dropdown">
+            VI
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">EN</a></li>
+            <li><a class="dropdown-item" href="#">JP</a></li>
+          </ul>
+        </div>
+        <button class="btn btn-pink"><i class="fa fa-location-dot"></i> TÌM AEON GẦN BẠN</button>
+      </div>
+    </div>
+
+    <!-- Menu ngang -->
+    <nav class="navbar navbar-expand-lg menu border-top sticky-top bg-white shadow-sm">
+      <div class="container">
+        <ul class="navbar-nav flex-row w-100 justify-content-between align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active px-4 py-2 rounded-pill d-flex align-items-center" style="background:#fde7f3; color:#b8005a; font-weight:500;" href="#">
+              <i class="fa fa-home me-2"></i>
+              Khuyến mãi & Sự kiện
+              <i class="fa fa-chevron-down ms-2"></i>
+            </a>
+          </li>
+          <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Chương trình Thành viên <i class="fa fa-chevron-down ms-1"></i></a></li>
+          <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Dịch vụ <i class="fa fa-chevron-down ms-1"></i></a></li>
+          <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Thương hiệu AEON</a></li>
+          <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Cẩm nang AEON</a></li>
+          <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Về AEON Việt Nam</a></li>
+          <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Tuyển dụng</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Banner Carousel -->
+  <section class="banner py-4">
+    <div class="container">
+      <div class="row g-3 align-items-stretch">
+        <!-- Banner động 7/10 -->
+        <div class="col-md-8">
+          <div id="mainCarousel" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="3000" >
+            <div class="carousel-inner rounded-4 h-100">
+              <div class="carousel-item active">
+                <img src="https://www.aeon.com.vn/wp-content/uploads/2025/09/edlp_kv-pc-min-width-800px-35-1.png" class="d-block w-100 h-100 object-fit-cover" alt="Banner 1">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.aeon.com.vn/wp-content/uploads/2024/08/aeon_member_2024.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Banner 2">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.aeon.com.vn/wp-content/uploads/2025/08/banner-800x354-1.png" class="d-block w-100 h-100 object-fit-cover" alt="Banner 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+          </div>
+        </div>
+        <!-- Ảnh tĩnh 3/10 -->
+        <div class="col-md-4">
+          <div class="h-100 d-flex flex-column justify-content-between rounded-4 overflow-hidden" style="background:#f8b7de;">
+            <div class="p-4">
+              <span class="badge bg-pink mb-2 float-end" style="font-size:1rem;">222</span>
+              <h5 class="fw-bold text-white mb-3">KHÁM PHÁ<br><span style="font-size:2rem;">CẨM NANG<br>MUA SẮM</span></h5>
+              <a href="#" class="btn btn-pink mt-2">XEM CHI TIẾT</a>
+            </div>
+            <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/3-dung-ho-tro-tich-diem-sau.png" alt="Cẩm nang mua sắm" class="w-100 mt-auto" style="max-height:120px;object-fit:contain;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Khuyến mãi thứ 4 -->
+  <section class="promo-banner py-4">
+    <div class="container">
+      <div class="row g-3 align-items-stretch">
+        <!-- Bên trái: 3/10 -->
+        <div class="col-md-4 d-flex flex-column justify-content-center">
+          <h2 class="fw-bold mb-3">THỨ 4 VUI VẺ<br>MUA THẬT RẺ</h2>
+          <p class="mb-4 text-secondary">
+            Ưu đãi các mặt hàng tươi sống<br>
+            vào thứ 4 hàng tuần – duy nhất tại AEON
+          </p>
+          <a href="#" class="btn btn-pink px-4 py-2 rounded-pill" style="font-size:1.2rem;">XEM THÊM</a>
+        </div>
+        <!-- Bên phải: 7/10 -->
+        <div class="col-md-8">
+          <div id="promoCarousel" class="carousel slide h-100" data-bs-ride="carousel" data-bs-interval="3500">
+            <div class="carousel-inner rounded-4 h-100">
+              <div class="carousel-item active" data-bs-interval="3500">
+                <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/t4vv.png" class="d-block w-100 h-100 object-fit-cover" alt="Thứ 4 vui vẻ">
+              </div>
+              <div class="carousel-item" data-bs-interval="3500">
+                <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/online-shopping.png" class="d-block w-100 h-100 object-fit-cover" alt="Ưu đãi thứ 4">
+              </div>
+              <div class="carousel-item" data-bs-interval="3500">
+                <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/edlp.png" class="d-block w-100 h-100 object-fit-cover" alt="Khuyến mãi thứ 4">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Khuyến mãi & Sự kiện -->
+  <section class="event-section py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">KHUYẾN MÃI &amp; SỰ KIỆN</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- Card 1 -->
+        <div class="col-md-3 col-6">
+          <div class="event-card position-relative rounded-4 overflow-hidden shadow-sm">
+            <img src="https://www.aeon.com.vn/wp-content/uploads/2025/09/1promotion-box-_home-thumbnail-min-width-300px-7-1.png" class="w-100 h-100" alt="Event 1">
+            <div class="event-overlay position-absolute">
+              <h5 class="fw-bold mb-2">Khai trương AEON Tân An - Chạm dòng Vàm Cỏ, bừng phong cách sống mới</h5>
+              <p>23.09.2025</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-3 col-6">
+          <div class="event-card position-relative rounded-4 overflow-hidden shadow-sm">
+            <img src="https://www.aeon.com.vn/wp-content/uploads/2025/09/pb_home-thumbnail-min-width-300px-7-1.png" class="w-100 h-100" alt="Event 2">
+            <div class="event-overlay position-absolute">
+              <h5 class="fw-bold mb-2">Mừng AEON Tân An - Tích điểm WAON ngay, đổi voucher mê say</h5>
+              <p>100 điểm WAON = 1 voucher 10.000đ</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-3 col-6">
+          <div class="event-card position-relative rounded-4 overflow-hidden shadow-sm">
+            <img src="https://www.aeon.com.vn/wp-content/uploads/2025/09/kv-ven-tron-chu-dao.png" class="w-100 h-100" alt="Event 3">
+            <div class="event-overlay position-absolute">
+              <h5 class="fw-bold mb-2">Đúng hẹn tâm giao – Vẹn tròn chu đáo</h5>
+              <p>Ưu đãi trung thu đặc biệt</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-md-3 col-6">
+          <div class="event-card position-relative rounded-4 overflow-hidden shadow-sm">
+            <img src="https://www.aeon.com.vn/wp-content/uploads/2025/09/1promotion-box-_home-thumbnail-min-width-300px-5.png" class="w-100 h-100" alt="Event 4">
+            <div class="event-overlay position-absolute">
+              <h5 class="fw-bold mb-2">Lễ hội Mẹ & Bé</h5>
+              <p>Giảm thêm 5% cho thành viên Kids Club</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-pink px-5 py-2 rounded-pill" style="font-size:1.2rem;">XEM THÊM</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dịch vụ tiện ích -->
+  <section class="service-section py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-3">DỊCH VỤ TIỆN ÍCH</h2>
+      <p class="text-center mb-4 text-secondary">
+        Hệ thống TTBHTH &amp; Siêu thị AEON tự hào mang đến cho khách hàng<br>
+        trải nghiệm mua sắm đa dạng và dịch vụ chất lượng cao chuẩn Nhật Bản.
+      </p>
+      <div class="row g-4 justify-content-center mb-4">
+        <!-- Card 1 -->
+        <div class="col-md-4 col-12">
+          <div class="service-card bg-light rounded-4 p-4 h-100 d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <div class="fw-bold mb-3 mb-md-0 text-md-start text-center">THANH TOÁN<br>KHÔNG TIỀN MẶT</div>
+            <div>
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/1.png" alt="Momo" style="height:40px;">
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4 col-12">
+          <div class="service-card bg-light rounded-4 p-4 h-100 d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <div class="fw-bold mb-3 mb-md-0 text-md-start text-center">MUA SẮM ONLINE</div>
+            <div>
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/2.png" alt="Online" style="height:48px;">
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4 col-12">
+          <div class="service-card bg-light rounded-4 p-4 h-100 d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <div class="fw-bold mb-3 mb-md-0 text-md-start text-center">GIAO HÀNG<br>VÀ LẮP ĐẶT</div>
+            <div>
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/3.png" alt="Truck" style="height:48px;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="#" class="btn btn-pink px-5 py-2 rounded-pill" style="font-size:1.2rem;">KHÁM PHÁ TẤT CẢ DỊCH VỤ TẠI AEON</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phong cách sống -->
+  <section class="lifestyle-section py-5">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+      <!-- Bên trái: Carousel 6/10 -->
+      <div class="col-md-7">
+        <div class="text-center mb-3">
+          <span class="fw-bold">@AEONVN.LIFESTYLE</span>
+          <h2 class="fw-bold mt-2">PHONG CÁCH SỐNG</h2>
+        </div>
+        <div class="position-relative">
+          <div id="lifestyleMultiCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex justify-content-center gap-4">
+                  <img src="https://www.aeon.com.vn/wp-content/themes/aeon/assets/images/homenew/instagram-2.jpg" class="rounded-4" style="width:260px;height:260px;object-fit:cover;" alt="Banner 2">
+                  <img src="https://www.aeon.com.vn/wp-content/themes/aeon/assets/images/homenew/instagram-3.jpg" class="rounded-4" style="width:260px;height:260px;object-fit:cover;" alt="Banner 3">
+                  <img src="https://www.aeon.com.vn/wp-content/themes/aeon/assets/images/homenew/instagram-4.jpg" class="rounded-4" style="width:260px;height:260px;object-fit:cover;" alt="Banner 4">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex justify-content-center gap-4">
+                  <img src="https://www.aeon.com.vn/wp-content/themes/aeon/assets/images/homenew/instagram-1.jpg" class="rounded-4" style="width:260px;height:260px;object-fit:cover;" alt="Banner 1">
+                  <img src="https://www.aeon.com.vn/wp-content/uploads/2025/08/edlp_kv-pc-min-width-800px-30-1.png" class="rounded-4" style="width:260px;height:260px;object-fit:cover;" alt="Banner 5">
+                  <img src="https://www.aeon.com.vn/wp-content/uploads/2025/09/edlp_kv-pc-min-width-800px-34-1.png" class="rounded-4" style="width:260px;height:260px;object-fit:cover;" alt="Banner 6">
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#lifestyleMultiCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#lifestyleMultiCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+          <div class="text-center mt-4">
+            <a href="#" class="btn btn-pink px-5 py-2 rounded-pill" style="font-size:1.2rem;">KHÁM PHÁ</a>
+          </div>
+        </div>
+      </div>
+      <!-- Bên phải: Card tĩnh 4/10 -->
+      <div class="col-md-5">
+  <div class="h-100 rounded-4 p-5 d-flex flex-column justify-content-start align-items-center position-relative" style="background:#ffe6f0; overflow:hidden; min-height:420px;">
+    <!-- Nội dung nổi phía trên, đẩy cao lên -->
+    <div class="position-relative text-center w-100" style="z-index:2; margin-top:10px; margin-bottom:40px;">
+      <h2 class="fw-bold mb-3">CẨM NANG AEON</h2>
+      <p class="mb-4 text-secondary">“Cẩm nang” ăn ngon, chơi vui, mua sắm hiệu quả tại AEON</p>
+      <a href="#" class="btn btn-pink px-5 py-2 rounded-pill mb-4" style="font-size:1.2rem;">TÌM HIỂU NGAY</a>
+    </div>
+    <!-- Ảnh mèo phủ dưới cùng card -->
+    <img src="https://www.aeon.com.vn/wp-content/themes/aeon/assets/images/homenew/meon-handbook.png"
+         alt="AEON Cat"
+         style="position:absolute; left:50%; bottom:0; transform:translateX(-50%); width:90%; max-width:320px; height:auto; z-index:1; pointer-events:none;">
+  </div>
+</div>
+</section>
+
+<!-- Tin tức -->
+<section class="news-section py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4">TIN TỨC</h2>
+    <div class="row g-4">
+      <!-- Bản tin AEON Việt Nam -->
+      <div class="col-md-9">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="fw-bold">BẢN TIN AEON VIỆT NAM</div>
+          <a href="#" class="text-pink fw-bold text-decoration-none">XEM TẤT CẢ <i class="fa fa-angle-double-right"></i></a>
+        </div>
+        <div class="row g-3">
+          <!-- News 1 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="https://corp.aeon.com.vn/wp-content/uploads/2024/11/AEON-Viet-Nam-thang-hang-len-vi-tri-11-trong-Top-100-Noi-lam-viec-tot-nhat-Viet-Nam-scaled-e1732241361914.jpg" class="card-img-top rounded-4" alt="News 1">
+              <div class="card-body px-0">
+                <div class="fw-bold mb-2">AEON VIỆT NAM 2 NĂM LIÊN ĐẦU NƠI LÀM VIỆC TỐT NHẤT</div>
+                <div class="text-secondary mb-2"><i class="fa fa-clock me-1"></i>22.11.2024</div>
+              </div>
+            </div>
+          </div>
+          <!-- News 2 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="https://corp.aeon.com.vn/wp-content/uploads/2024/11/Hop-qua-ki-niem-13-nam-cua-AEON-Viet-Nam-co-the-tai-che.jpg" class="card-img-top rounded-4" alt="News 2">
+              <div class="card-body px-0">
+                <div class="fw-bold mb-2">NGƯỜI AEON &amp; DNA PHÁT TRIỂN BỀN VỮNG CỦA AEON VIỆT NAM</div>
+                <div class="text-secondary mb-2"><i class="fa fa-clock me-1"></i>19.11.2024</div>
+              </div>
+            </div>
+          </div>
+          <!-- News 3 -->
+          <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="https://corp.aeon.com.vn/wp-content/uploads/2024/11/AEON-Viet-Nam-gianh-giai-thuong-ICF-Coaching-Impact-Awards-2024-trong-hang-muc-Emerging-Organization-e1732017456308.jpg" class="card-img-top rounded-4" alt="News 3">
+              <div class="card-body px-0">
+                <div class="fw-bold mb-2">AEON VIỆT NAM NHẬN GIẢI THƯỞNG TỪ LIÊN ĐOÀN KHAI VẤN</div>
+                <div class="text-secondary mb-2"><i class="fa fa-clock me-1"></i>19.11.2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Pagination -->
+        <div class="text-center mt-3">
+          <span class="fw-bold text-pink" style="letter-spacing:2px;">
+            <i class="fa fa-angle-left"></i> 1 / 4 <i class="fa fa-angle-right"></i>
+          </span>
+        </div>
+      </div>
+      <!-- Bản tin tập đoàn AEON -->
+      <div class="col-md-3">
+        <div class="bg-light rounded-4 p-4 h-100">
+          <div class="fw-bold mb-3">BẢN TIN TẬP ĐOÀN AEON</div>
+          <div class="mb-2"><a href="#" class="text-dark text-decoration-none d-block">Vol.706 – Từ “Loại bỏ” đến “Tái chế” mỗi ngày <span class="float-end">&gt;</span></a></div>
+          <div class="mb-2"><a href="#" class="text-dark text-decoration-none d-block">Vol.707 – Bảo tồn Di sản Thế giới bằng 10.000 cây xanh được <span class="float-end">&gt;</span></a></div>
+          <div class="mb-2"><a href="#" class="text-dark text-decoration-none d-block">Vol.704 – Không chỉ ngon miệng mà còn là lối sống bền vững <span class="float-end">&gt;</span></a></div>
+          <div class="mb-2"><a href="#" class="text-dark text-decoration-none d-block">Vol.702 – Hoạt động trồng cây của AEON từ năm 1991 <span class="float-end">&gt;</span></a></div>
+          <div class="mt-3"><a href="#" class="text-pink fw-bold text-decoration-none">XEM TẤT CẢ <i class="fa fa-angle-double-right"></i></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Thương hiệu -->
+<section class="brand-section py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-2">THƯƠNG HIỆU AEON</h2>
+    <p class="text-center mb-4 text-secondary">
+      Cùng khám phá loạt Thương hiệu riêng chuẩn Nhật từ AEON, mang đến các sản phẩm chất lượng cùng trải nghiệm đa dạng cho Khách hàng.
+    </p>
+    <div class="row g-0 justify-content-center">
+      <!-- Dòng 1 -->
+      <div class="col-12">
+        <div class="row g-0 justify-content-center">
+          <div class="col-md-2 col-6">
+            <div class="brand-card position-relative bg-white d-flex align-items-center justify-content-center" style="height:120px;">
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/topvalu.png" alt="Home Coordy" style="max-height:40px;">
+              <span class="brand-overlay">Xem thêm &gt;&gt;</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="brand-card position-relative bg-white d-flex align-items-center justify-content-center" style="height:120px;">
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/home-coordy.png" alt="Home Coordy" style="max-height:40px;">
+              <span class="brand-overlay">Xem thêm &gt;&gt;</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="brand-card position-relative bg-white d-flex flex-column align-items-center justify-content-center border-pink" style="height:120px;">
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/giorno.png" alt="Giorno" style="max-height:40px;">
+              <span class="brand-overlay">Xem thêm &gt;&gt;</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="brand-card position-relative bg-white d-flex align-items-center justify-content-center" style="height:120px;">
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/mycloset.png" alt="MyCloset" style="max-height:40px;">
+              <span class="brand-overlay">Xem thêm &gt;&gt;</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="brand-card position-relative bg-white d-flex align-items-center justify-content-center" style="height:120px;">
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/trademark-aeonshop.png" alt="Aeon Shop" style="max-height:40px;">
+              <span class="brand-overlay">Xem thêm &gt;&gt;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Dòng 2 -->
+      <div class="col-12">
+        <div class="row g-0 justify-content-center">
+          <div class="col-md-2 col-6">
+            <div class="brand-card position-relative bg-white d-flex align-items-center justify-content-center" style="height:120px;">
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/maxvalu.png" alt="MaxValu" style="max-height:40px;">
+              <span class="brand-overlay">Xem thêm &gt;&gt;</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="brand-card position-relative bg-white d-flex align-items-center justify-content-center" style="height:120px;">
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/daiso.png" alt="Daiso" style="max-height:40px;">
+              <span class="brand-overlay">Xem thêm &gt;&gt;</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="brand-card position-relative bg-white d-flex align-items-center justify-content-center" style="height:120px;">
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/trademark-bicycleshop.png" alt="Bicycle Shop" style="max-height:40px;">
+              <span class="brand-overlay">Xem thêm &gt;&gt;</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="brand-card position-relative bg-white d-flex align-items-center justify-content-center" style="height:120px;">
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/trademark-jb.png" alt="Glam Beautique" style="max-height:40px;">
+              <span class="brand-overlay">Xem thêm &gt;&gt;</span>
+            </div>
+          </div>
+          <div class="col-md-2 col-6">
+            <div class="brand-card position-relative bg-white d-flex align-items-center justify-content-center" style="height:120px;">
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2024/05/trademark-petemo.png" alt="Petemo" style="max-height:40px;">
+              <span class="brand-overlay">Xem thêm &gt;&gt;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="#" class="btn btn-pink px-5 py-2 rounded-pill" style="font-size:1.2rem;">KHÁM PHÁ TẤT CẢ THƯƠNG HIỆU TẠI AEON</a>
+    </div>
+  </div>
+</section>
+  <!--Tìm AEON gần-->
+  <section class="find-aeon-section py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Bên trái: Danh sách siêu thị + bộ lọc -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm p-3">
+          <input type="text" class="form-control mb-3" placeholder="Search...">
+          <div class="d-flex gap-2 mb-3">
+            <select class="form-select">
+              <option>Tỉnh/Thành phố</option>
+              <option>Hồ Chí Minh</option>
+              <option>Hà Nội</option>
+              <option>Bình Dương</option>
+            </select>
+            <select class="form-select">
+              <option>Loại hình Siêu thị</option>
+              <option>AEON Mall</option>
+              <option>AEON Supermarket</option>
+            </select>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item active" 
+    data-name="AEON TÂN PHÚ CELADON"
+    data-address="30 Đ. Tân Thắng, Phường Tân Sơn Nhì, TP.HCM"
+    data-time="8AM - 10PM"
+    data-img="https://www.aeon.com.vn/wp-content/uploads/2018/05/aeon-tan-phu-introduction-1.jpeg"
+    data-contact="Liên hệ DVKH 1800.888.886 - Zalo: 0366 565454"
+    data-desc="Với diện tích hơn 70.000 m2, trung tâm thương mại AEON MALL Tân Phú Celadon là một trung tâm phức hợp với nhiều tiện ích hoàn hảo dành cho gia đình như siêu thị, cửa hàng mỹ phẩm, thời trang, đồ gia dụng, nhà hàng, rạp chiếu phim, khu vui chơi, ...">
+              <i class="fa fa-location-dot me-2"></i>
+              <b>AEON TÂN PHÚ CELADON</b>
+              <div class="small text-secondary">30 Đ. Tân Thắng, Phường Tân Sơn Nhì, TP.HCM<br>Mở cửa: 8AM - 10PM</div>
+            </li>
+            <li class="list-group-item"
+    data-name="AEON BÌNH TÂN"
+    data-address="1 Đường Số 17A, Khu phố 11, Phường An Lạc, TP.HCM"
+    data-time="8AM - 10PM"
+    data-img="https://www.aeon.com.vn/wp-content/uploads/2018/05/aeon-binh-tan-introduction-2.png"
+    data-contact="Liên hệ DVKH 1800.888.886 - Zalo: 0367 166060"
+    data-desc="AEON MALL Bình Tân – một điểm đến với vô vàn trải nghiệm. Từ MUA SẮM, ẨM THỰC đến GIẢI TRÍ cùng những TIỆN ÍCH đặc biệt dành riêng cho khách hàng">
+              <i class="fa fa-location-dot me-2"></i>
+              <b>AEON BÌNH TÂN</b>
+              <div class="small text-secondary">1 Đường Số 17A, Khu phố 11, Phường An Lạc, TP.HCM<br>Mở cửa: 8AM - 10PM</div>
+            </li>
+            <li class="list-group-item"
+    data-name="AEON LONG BIÊN"
+    data-address="27 Đường Cổ Linh, Phường Long Biên, Hà Nội"
+    data-time="8AM - 10PM"
+    data-img="https://www.aeon.com.vn/wp-content/uploads/2018/05/aeon-long-bien-introduction-2.jpg"
+    data-contact="Liên hệ DVKH 1800.888.886 - Zalo: 0366 107711"
+    data-desc="AEON MALL Long Biên là TTTM Nhật Bản đầu tiên tại Hà Nội khai trương tháng 10/2015. Dự án với số vốn đầu tư lên đến 200 triệu USD được xây dựng trên tổng diện tích đất khoảng 10 ha, hiện tại AEON MALL Long Biên là một trong những khu trung tâm mua sắm sầm uất, tiện lợi bậc nhất Hà Nội.">
+              <i class="fa fa-location-dot me-2"></i>
+              <b>AEON LONG BIÊN</b>
+              <div class="small text-secondary">27 Đường Cổ Linh, Phường Long Biên, Hà Nội<br>Mở cửa: 8AM - 10PM</div>
+            </li>
+            <li class="list-group-item"
+    data-name="AEON BÌNH DƯƠNG CANARY"
+    data-address="1 Đại lộ Bình Dương, Khu Phố Bình Giao, TP.HCM"
+    data-time="8AM - 10PM"
+    data-img="https://www.aeon.com.vn/wp-content/uploads/2018/05/aeon-binh-duong-introduction-2.jpg"
+    data-contact="Liên hệ DVKH 1800.888.886 - Zalo: 0343 036111"
+    data-desc="Với diện tích hơn 70.000 m2, TTTM AEON MALL Bình Dương Canary là một trung tâm phức hợp với nhiều tiện ích hoàn hảo dành cho gia đình như siêu thị, cửa hàng mỹ phẩm, thời trang, đồ gia dụng, nhà hàng, rạp chiếu phim, khu vui chơi thiếu nhi, bowling, trung tâm toán học, trung tâm thể dục thể hình,...">
+              <i class="fa fa-location-dot me-2"></i>
+              <b>AEON BÌNH DƯƠNG CANARY</b>
+              <div class="small text-secondary">1 Đại lộ Bình Dương, Khu Phố Bình Giao, TP.HCM<br>Mở cửa: 8AM - 10PM</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bên phải: Thông tin chi tiết + tabs + ảnh -->
+      <div class="col-md-8">
+        <div class="card border-0 shadow-sm p-4">
+          <div class="d-flex gap-2 mb-3">
+            <button class="btn btn-pink rounded-pill px-4 fw-bold tab-btn" data-tab="overview">Tổng Quan</button>
+            <button class="btn rounded-pill px-4 fw-bold tab-btn" style="background:#ffe6f0;" data-tab="map">Bản Đồ Vị Trí</button>
+            <button class="btn rounded-pill px-4 fw-bold tab-btn" style="background:#ffe6f0;" data-tab="floor">Bản Đồ Sàn</button>
+          </div>
+          <!-- Tổng quan -->
+          <div class="tab-content tab-overview mb-3">
+            <img src="https://www.aeon.com.vn/wp-content/uploads/2018/05/aeon-tan-phu-introduction-1.jpeg" class="w-100 rounded-4" style="max-height:260px; object-fit:cover;" alt="AEON Tân Phú Celadon">
+            <div class="mt-3">
+              <h4 class="fw-bold mb-2">AEON Tân Phú Celadon</h4>
+              <div class="mb-2 text-secondary">Liên hệ DVKH 1800.888.886 - Zalo: 0366 565454 <a href="#" class="btn btn-pink float-end px-4 rounded-pill">WEBSITE</a></div>
+              <p>Với diện tích hơn 70.000 m2, trung tâm thương mại AEON MALL Tân Phú Celadon là một trung tâm phức hợp với nhiều tiện ích hoàn hảo dành cho gia đình như siêu thị, cửa hàng mỹ phẩm, thời trang, đồ gia dụng, nhà hàng, rạp chiếu phim, khu vui chơi, ...</p>
+            </div>
+          </div>
+          <!-- Bản đồ vị trí -->
+          <div class="tab-content tab-map mb-3" style="display:none;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.567764797039!2d106.62004947480546!3d10.84523688929859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b2a0e2b7e7b%3A0x7e8e1e8b4e1e8b4e!2sAEON%20Mall%20Tan%20Phu%20Celadon!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" width="100%" height="360" style="border:0;border-radius:16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <!-- Bản đồ sàn -->
+          <div class="tab-content tab-floor mb-3" style="display:none;">
+            <div class="text-center">
+              <img src="https://www.aeon.com.vn/wp-content/uploads/2018/05/aeon-tan-phu-floor-g-1.png"
+                   alt="Bản đồ sàn AEON"
+                   style="max-width:100%; border-radius:16px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p>&copy; 2025 Aeon Việt Nam | Bản demo học tập</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JS riêng -->
+  <script src="script.js"></script>
+</body>
+</html>
