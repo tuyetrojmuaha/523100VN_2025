@@ -14,6 +14,66 @@
 </head>
 
 <body>
+    <!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script>
+  // Nút Back to Top
+  const backToTop = document.createElement("button");
+  backToTop.innerText = "↑";
+  backToTop.id = "backToTop";
+  backToTop.style.position = "fixed";
+  backToTop.style.bottom = "20px";
+  backToTop.style.right = "20px";
+  backToTop.style.display = "none";
+  backToTop.style.background = "#e91e63";
+  backToTop.style.color = "#fff";
+  backToTop.style.border = "none";
+  backToTop.style.padding = "10px 15px";
+  backToTop.style.borderRadius = "50%";
+  backToTop.style.cursor = "pointer";
+  document.body.appendChild(backToTop);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Sticky Navbar khi cuộn
+  const navbar = document.querySelector(".navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add("shadow", "bg-white");
+    } else {
+      navbar.classList.remove("shadow", "bg-white");
+    }
+  });
+
+  // Hiệu ứng fade-in khi scroll
+  const faders = document.querySelectorAll(".fade-in");
+  const appearOptions = { threshold: 0.2 };
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("appear");
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+
 
     <!-- Header -->
     <header class="bg-white shadow-sm">
