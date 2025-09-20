@@ -84,3 +84,37 @@ document.querySelectorAll('.find-aeon-section .tab-btn').forEach(function(btn) {
     document.querySelector('.find-aeon-section .tab-' + btn.dataset.tab).style.display = 'block';
   });
 });
+
+// Lấy nút cuộn lên đầu trang
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// Hiển thị hoặc ẩn nút khi cuộn trang
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('show');
+    } else {
+        scrollToTopBtn.classList.remove('show');
+    }
+});
+
+// Xử lý sự kiện click để cuộn lên đầu trang
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+// Thêm đoạn mã này vào file JavaScript của bạn hoặc vào thẻ <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('mouseenter', function() {
+            this.querySelector('.dropdown-menu').classList.add('show');
+        });
+
+        dropdown.addEventListener('mouseleave', function() {
+            this.querySelector('.dropdown-menu').classList.remove('show');
+        });
+    });
+});

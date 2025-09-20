@@ -16,57 +16,84 @@
 <body>
  <!-- Header -->
   <header class="header shadow-sm">
-    <div class="container d-flex align-items-center justify-content-between py-2">
+        <div class="container d-flex align-items-center justify-content-between py-2">
+            
+            <div class="header-left d-flex align-items-center">
+                <img src="logo_vi.svg" alt="Aeon Logo" class="logo">
+            </div>
 
-      <!-- Logo -->
-      <div class="header-left d-flex align-items-center">
-        <img src="logo_vi.svg" alt="Aeon Logo" class="logo">
-      </div>
+            <div class="header-center flex-grow-1 px-4">
+                <div class="search-box">
+                    <input type="text" class="form-control" placeholder="Nhập nội dung tìm kiếm">
+                    <button class="btn"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
 
-      <!-- Search -->
-      <div class="header-center flex-grow-1 px-4">
-        <div class="search-box">
-          <input type="text" class="form-control" placeholder="Nhập nội dung tìm kiếm">
-          <button class="btn"><i class="fa fa-search"></i></button>
+            <div class="header-right d-flex align-items-center gap-3">
+                <div class="dropdown">
+                    <button class="btn btn-lang dropdown-toggle" data-bs-toggle="dropdown">
+                        VI
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">EN</a></li>
+                        <li><a class="dropdown-item" href="#">JP</a></li>
+                    </ul>
+                </div>
+                <button class="btn btn-pink"><i class="fa fa-location-dot"></i> TÌM AEON GẦN BẠN</button>
+            </div>
         </div>
-      </div>
+    </header>
 
-      <!-- Language + Button -->
-      <div class="header-right d-flex align-items-center gap-3">
-        <div class="dropdown">
-          <button class="btn btn-lang dropdown-toggle" data-bs-toggle="dropdown">
-            VI
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">EN</a></li>
-            <li><a class="dropdown-item" href="#">JP</a></li>
-          </ul>
+   <nav class="navbar navbar-expand-lg menu border-top bg-white shadow-sm sticky-top" style="z-index: 1000;">
+        <div class="container">
+            <ul class="navbar-nav flex-row w-100 justify-content-between align-items-center">
+                <li class="nav-item dropdown">
+                    <a class="nav-link px-4 py-2 dropdown-toggle" href="#" id="dropdown-promotion" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Khuyến mãi & Sự kiện <i class="fa fa-chevron-down ms-2"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown-promotion">
+                        <li><a class="dropdown-item" href="#">Sale Tưng Bừng - Mừng Đại Lễ</a></li>
+                        <li><a class="dropdown-item" href="#">Trao Tết Trắng Trọn Gắn Kết</a></li>
+                        <li><a class="dropdown-item" href="#">Thứ 4 Vui Vẻ</a></li>
+                        <li><a class="dropdown-item" href="#">Giá Thấp Mỗi Ngày</a></li>
+                        <li><a class="dropdown-item" href="#">Khuyến mãi & Sự kiện</a></li>
+                        <li><a class="dropdown-item" href="#">Cẩm nang mua sắm</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link px-4 py-2 dropdown-toggle" href="#" id="dropdown-membership" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Chương trình Thành viên <i class="fa fa-chevron-down ms-1"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown-membership">
+                        <li><a class="dropdown-item" href="#">Chương trình Điểm Thành viên WAON</a></li>
+                        <li><a class="dropdown-item" href="#">Chương trình Thành viên AEON KIDS CLUB</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link px-4 py-2 dropdown-toggle" href="#" id="dropdown-services" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dịch vụ <i class="fa fa-chevron-down ms-1"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown-services">
+                        <li><a class="dropdown-item" href="#">Mua sắm Đa Kênh</a></li>
+                        <li><a class="dropdown-item" href="#">Thanh toán không tiền mặt</a></li>
+                        <li><a class="dropdown-item" href="#">Giao hàng & Lắp đặt</a></li>
+                        <li><a class="dropdown-item" href="#">Dịch Vụ Hoàn Thuế GTGT</a></li>
+                        <li><a class="dropdown-item" href="#">Phản hồi Dịch vụ</a></li>
+                        <li><a class="dropdown-item" href="#">Giải pháp mua sắm cho doanh nghiệp</a></li>
+                        <li><a class="dropdown-item" href="#">Toàn bộ Dịch vụ</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Thương hiệu AEON</a></li>
+                <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Cẩm nang AEON</a></li>
+                <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Về AEON Việt Nam</a></li>
+                <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Tuyển dụng</a></li>
+            </ul>
         </div>
-        <button class="btn btn-pink"><i class="fa fa-location-dot"></i> TÌM AEON GẦN BẠN</button>
-      </div>
-    </div>
-
-    <!-- Menu ngang -->
-    <nav class="navbar navbar-expand-lg menu border-top sticky-top bg-white shadow-sm">
-      <div class="container">
-        <ul class="navbar-nav flex-row w-100 justify-content-between align-items-center">
-          <li class="nav-item">
-            <a class="nav-link active px-4 py-2 rounded-pill d-flex align-items-center" style="background:#fde7f3; color:#b8005a; font-weight:500;" href="#">
-              <i class="fa fa-home me-2"></i>
-              Khuyến mãi & Sự kiện
-              <i class="fa fa-chevron-down ms-2"></i>
-            </a>
-          </li>
-          <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Chương trình Thành viên <i class="fa fa-chevron-down ms-1"></i></a></li>
-          <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Dịch vụ <i class="fa fa-chevron-down ms-1"></i></a></li>
-          <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Thương hiệu AEON</a></li>
-          <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Cẩm nang AEON</a></li>
-          <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Về AEON Việt Nam</a></li>
-          <li class="nav-item"><a class="nav-link px-4 py-2" href="#">Tuyển dụng</a></li>
-        </ul>
-      </div>
     </nav>
-  </header>
+
   <!-- Banner Carousel -->
   <section class="banner py-4">
     <div class="container">
@@ -458,7 +485,8 @@
     </div>
   </div>
 </section>
-  <!--Tìm AEON gần-->
+
+<!--Tìm AEON gần-->
   <section class="find-aeon-section py-5">
   <div class="container">
     <div class="row g-4">
@@ -561,12 +589,162 @@
     </div>
   </div>
 </section>
- <!-- Footer -->
-  <footer class="footer">
-    <div class="container text-center">
-      <p>&copy; 2025 Aeon Việt Nam | Bản demo học tập</p>
+
+<!--Tuyển dụng-->
+<section class="main-content-banner">
+    <div class="container-fluid p-0">
+        <div class="row g-0 align-items-center">
+            <div class="col-lg-7">
+                <div class="image-wrapper">
+                    <img src="https://corp.aeon.com.vn/wp-content/uploads/2024/12/Ngay-hoi-tuyen-dung-AEON-Xuan-Thuy-thu-hut-hang-nghin-ung-vien-e1734925888117.jpg" alt="AEON Recruitment Banner" class="img-fluid banner-image">
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="text-content-wrapper p-5">
+                    <h1 class="main-title">AEON TUYỂN DỤNG</h1>
+                    <h2 class="sub-title">NUÔI DƯỠNG CHẤT RIÊNG - SỰ NGHIỆP TOẢ SẮC</h2>
+                    <p class="description">
+                        AEON Việt Nam cam kết mang lại môi trường làm việc hạnh phúc và sự nghiệp bền vững - nơi bạn có thể nuôi dưỡng chất riêng của bản thân và tỏa sáng trong sự nghiệp dựa trên 3 trụ cột: Phát triển sự nghiệp bền vững, Văn hóa làm việc bền vững và Doanh nghiệp bền vững.
+                    </p>
+                    <a href="#" class="btn btn-call-to-action">CÁC VỊ TRÍ TUYỂN DỤNG TẠI AEON VIỆT NAM</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
+</section>
+
+ <!-- Footer -->
+  <section class="contact-section-full-layout">
+    <div class="container py-5">
+        <div class="row g-4"> <div class="col-lg-7">
+                <div class="row g-4"> <div class="col-12">
+                        <div class="contact-box main-office-box">
+                            <h5 class="contact-title">Văn Phòng Chính</h5>
+                            <p>
+                                <i class="fa fa-building me-2"></i>
+                                CÔNG TY TNHH AEON VIỆT NAM
+                            </p>
+                            <p>
+                                <i class="fa fa-map-marker-alt me-2"></i>
+                                Số 30 Đường Tần Thắng, Phường Tân Sơn Nhì, Thành phố Hồ Chí Minh
+                            </p>
+                            <p><i class="fa fa-clock me-2"></i> Thứ 2 - Thứ 6 (8:30 - 17:30)</p>
+                            <p class="mb-0">
+                                <i class="fa fa-phone me-2"></i> (028) 6269 2012
+                                <span class="ms-3"><i class="fa fa-phone me-2"></i> (028) 6288 7711</span>
+                            </p>
+                            <p class="mb-0 mt-2"><i class="fa fa-envelope me-2"></i> contact@aeon.com.vn</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="contact-box">
+                            <h5 class="contact-title">Phòng Truyền Thông & Đối Ngoại</h5>
+                            <p><i class="fa fa-phone me-2"></i> (033) 217 9797</p>
+                            <p class="mb-0"><i class="fa fa-envelope me-2"></i> phongtruyenthong@aeon.com.vn</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="contact-box">
+                            <h5 class="contact-title">Liên hệ quảng cáo</h5>
+                            <p><i class="fa fa-phone me-2"></i> 028 6288 7711 - Ex. 859</p>
+                            <p><i class="fa fa-envelope me-2"></i> booking.media@aeon.com.vn</p>
+                            <a href="#" class="btn btn-contact-media mt-2"><i class="fa fa-globe me-2"></i> aeon.com.vn/media</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="contact-box">
+                            <h5 class="contact-title">Phòng Chăm Sóc Khách Hàng</h5>
+                            <p><i class="fa fa-phone me-2"></i> 1800.888.886</p>
+                            <p class="mb-0"><i class="fa fa-envelope me-2"></i> contact@aeon.com.vn</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="contact-box">
+                            <h5 class="contact-title">Hotline mua hàng</h5>
+                            <p class="mb-0"><i class="fa fa-phone me-2"></i> 1800.888.699</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="contact-box text-center-sm">
+                            <a href="#" class="link-arrow-full">
+                                Liên hệ chào hàng cho AEON Việt Nam <i class="fa fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="right-column-content d-flex flex-column h-100 justify-content-between">
+                    <div class="right-image-banner">
+                        <img src="https://www.aeon.com.vn/wp-content/uploads/2024/06/cap-nhat-gio-mo-cua-cua-sieu-thi-aeon-e1718521816684.jpg" alt="AEON Banner" class="img-fluid">
+                    </div>
+                    <div class="right-buttons mt-3 d-flex flex-wrap justify-content-center gap-2">
+                        <a href="#" class="btn btn-action-share"><i class="fa fa-paper-plane me-2"></i> CHIA SẺ CÙNG AEON</a>
+                        <a href="#" class="btn btn-action-return"><i class="fa fa-undo-alt me-2"></i> ĐỔI TRẢ/HOÀN TIỀN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="#" class="btn btn-footer-link">HỒ SƠ NĂNG LỰC CỦA CHÚNG TÔI</a>
+                    <a href="#" class="btn btn-footer-link">CHÍNH SÁCH BẢO VỆ DỮ LIỆU CÁ NHÂN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="aeon-footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="https://www.aeon.com.vn/wp-content/themes/aeon/assets/img/logo-footer-1.png" alt="Planting Seeds of Growth">
+                <img src="https://www.aeon.com.vn/wp-content/themes/aeon/assets/img/logo-footer-2.png" alt="AEON logo">
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Zalo"><img src="https://www.aeon.com.vn/wp-content/themes/aeon/assets/img/icon/Zalo.svg" alt="Zalo" class="social-icon zalo"></a>
+                <a href="#" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+        
+        <hr class="footer-divider">
+
+        <div class="footer-bottom">
+            <div class="footer-info">
+                <div class="info-column">
+                    <p><strong>Công ty TNHH AEON Việt Nam</strong> thành lập và hoạt động theo Giấy chứng nhận đăng ký doanh nghiệp số 0311241512 do Ủy ban nhân dân Thành phố Hồ Chí Minh cấp lần đầu tiên ngày 07/10/2011.</p>
+                    <p>Điện thoại: (028) 62887711 | Lĩnh vực kinh doanh: Bán lẻ</p>
+                </div>
+                <div class="info-column">
+                    <p><strong>Địa chỉ tên miền:</strong> www.aeon.com.vn</p>
+                    <p><strong>Người chịu trách nhiệm:</strong> Phòng Marketing</p>
+                    <p><strong>Bản quyền</strong> thuộc AEON Việt Nam.</p>
+                    <p><strong>Website:</strong> www.aeon.com.vn thuộc quyền sở hữu của Công ty TNHH Aeon Việt Nam.</p>
+                </div>
+            </div>
+            <div class="footer-certifications">
+                <img src="https://images.dmca.com/Badges/dmca-badge-w100-2x1-01.png?ID=226b5450-b69e-4ae9-8470-36001650112d" alt="DMCA Protected" class="certification-img">
+                <img src="https://www.aeon.com.vn/wp-content/themes/aeon/assets/img/bct.png" alt="Đã thông báo Bộ Công Thương" class="certification-img">
+            </div>
+        </div>
+
+        <p class="footer-copyright">Copyright &copy; AEON VIETNAM Co., Ltd</p>
+
+    </div>
+    
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

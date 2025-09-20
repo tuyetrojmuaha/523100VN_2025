@@ -17,20 +17,85 @@
   color: #888;
   font-weight: 500;
 }
+/* Khai báo biến màu sắc */
+:root {
+    --aeon-pink: #b8005a;
+}
+
+/* Định dạng chung cho cả hai loại nút */
 .btn-pink, .btn-outline-pink {
-  background: var(--aeon-pink);
-  color: #fff;
-  border: none;
+    /* Đảm bảo nút có cùng một font và kích thước */
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    /* Thêm hiệu ứng chuyển động mượt mà */
+    transition: all 0.3s ease;
 }
+
+/* Kiểu nút màu hồng đặc trưng */
+.btn-pink {
+    background: var(--aeon-pink);
+    color: #fff;
+    border: none;
+}
+
+/* Kiểu nút viền hồng */
 .btn-outline-pink {
-  background: transparent;
-  color: var(--aeon-pink);
-  border: 1px solid var(--aeon-pink);
+    background: transparent;
+    color: var(--aeon-pink);
+    border: 1px solid var(--aeon-pink);
 }
+
+/* Hiệu ứng khi di chuột qua cả hai loại nút */
 .btn-pink:hover, .btn-outline-pink:hover {
-  background: #c2006a;
-  color: #fff;
+    background: #c2006a;
+    color: #fff;
+    /* Thêm hiệu ứng nhô lên nhẹ */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+/* Kích hoạt dropdown khi di chuột qua trên màn hình lớn */
+@media (min-width: 992px) {
+    .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+}
+/* Điều chỉnh kiểu dáng của menu thả xuống */
+.menu .dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+/* Các tùy chọn trong menu */
+.menu .dropdown-item {
+    padding: 10px 20px;
+    color: #555;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Hiệu ứng khi di chuột qua tùy chọn */
+.menu .dropdown-item:hover {
+    background-color: #fde7f3; /* Màu nền hồng nhạt */
+    color: #b8005a; /* Màu chữ hồng đậm */
+}
+
+.menu .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 .menu .navbar-nav {
   flex-direction: row !important;
   width: 100%;
@@ -50,9 +115,9 @@
   min-width: unset;
   box-shadow: none;
   line-height: 1.2;
-  display: flex;
-  align-items: center;
+   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .menu .nav-link.active {
   background: #fde7f3;
   color: #b8005a;
@@ -69,6 +134,7 @@
 .menu .nav-link i {
   font-size: 1rem;
 }
+
 
 /* Search box */
 .search-box {
@@ -157,12 +223,437 @@
 }
 
 /* Footer */
-.footer {
-  background: var(--aeon-gray);
-  padding: 2rem 0;
-  color: #555;
-  font-size: 1rem;
-  margin-top: 2rem;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Phần footer chung */
+.aeon-footer {
+    background-color: #e6007e; /* Màu tím mới từ hình ảnh của bạn */
+    color: #fff;
+    padding: 40px 20px 20px;
+    position: relative;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Phần trên footer (logo và social media) */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 40px; /* Điều chỉnh kích thước logo */
+    margin-right: 20px;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #ffcc00; /* Màu vàng khi hover */
+}
+
+.social-icon {
+    height: 20px; /* Điều chỉnh kích thước icon đặc biệt như Zalo */
+}
+
+/* Đường kẻ phân cách */
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
+}
+
+/* Styling cho phần trên của footer (thông tin liên hệ) */
+.footer-aeon-contact {
+    /* Màu nền xám nhạt */
+    background-color: #f8f8f8;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Các khung box chứa thông tin */
+.contact-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.contact-box p {
+    margin-bottom: 5px;
+}
+
+.contact-box i {
+    width: 20px;
+}
+
+/* Tiêu đề của các box */
+.contact-title {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Link mũi tên */
+.link-arrow {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color 0.3s ease;
+}
+
+.link-arrow:hover {
+    color: #b8005a;
+}
+
+/* Nút liên hệ quảng cáo */
+.btn-contact-media {
+    background-color: #f0f0f0;
+    color: #555;
+    border-radius: 50px;
+    padding: 8px 15px;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact-media:hover {
+    background-color: #e0e0e0;
+}
+
+/* Các nút liên kết ở cuối phần trên footer */
+.btn-footer-link {
+    background-color: #b8005a;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.btn-footer-link:hover {
+    background-color: #8a0045;
+    color: #fff;
+}
+
+---/* Styling chung cho toàn bộ phần contact */
+.contact-section-full-layout {
+    background-color: #f8f8f8; /* Màu nền giống trong ảnh */
+    color: #555;
+    font-size: 14px;
+}
+
+/* Các khung box chứa thông tin */
+.contact-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    height: 100%; /* Đảm bảo các box có chiều cao bằng nhau trong cùng một hàng */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa nội dung theo chiều dọc nếu có đủ không gian */
+}
+
+.contact-box p {
+    margin-bottom: 5px;
+    display: flex; /* Dùng flex để căn icon và text */
+    align-items: flex-start; /* Căn trên đầu icon và text */
+}
+
+.contact-box p i {
+    width: 20px; /* Cố định chiều rộng icon */
+    flex-shrink: 0; /* Đảm bảo icon không bị co lại */
+    margin-right: 8px; /* Khoảng cách giữa icon và text */
+    padding-top: 3px; /* Điều chỉnh vị trí icon */
+    color: #b8005a; /* Màu icon */
+}
+
+/* Tiêu đề của các box */
+.contact-title {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Link mũi tên (cho "Liên hệ chào hàng...") */
+.link-arrow-full {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.link-arrow-full:hover {
+    color: #b8005a;
+}
+
+/* Nút liên hệ quảng cáo */
+.btn-contact-media {
+    background-color: #f0f0f0;
+    color: #555;
+    border-radius: 50px;
+    padding: 8px 15px;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact-media:hover {
+    background-color: #e0e0e0;
+}
+
+/* Styling cho cột bên phải (ảnh và nút) */
+.right-column-content {
+    background-color: #fde7f3; /* Màu nền hồng nhạt như trong ảnh */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.right-image-banner img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Căn giữa ảnh */
+}
+
+.right-buttons {
+    margin-top: 20px;
+}
+
+.btn-action-share,
+.btn-action-return {
+    background-color: #b8005a; /* Màu tím/hồng đặc trưng */
+    color: #fff;
+    border-radius: 50px;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+    border: none; /* Bỏ border mặc định của button */
+}
+
+.btn-action-share:hover,
+.btn-action-return:hover {
+    background-color: #8a0045; /* Màu đậm hơn khi hover */
+    color: #fff;
+}
+
+
+/* Các nút liên kết ở cuối cùng của footer */
+.btn-footer-link {
+    background-color: #b8005a;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.btn-footer-link:hover {
+    background-color: #8a0045;
+    color: #fff;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-box {
+        padding: 15px;
+    }
+    .contact-box p {
+        flex-direction: column; /* Icon và text xuống dòng trên di động */
+        align-items: flex-start;
+    }
+    .contact-box p i {
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+    .right-column-content {
+        padding: 20px 15px;
+    }
+    .btn-action-share,
+    .btn-action-return {
+        width: 100%; /* Nút chiếm toàn bộ chiều rộng trên di động */
+        text-align: center;
+    }
+}
+
+/* Styling cho phần footer chính (màu tím) */
+.aeon-footer {
+    background-color: #a52a9c;
+    color: #fff;
+    padding: 40px 20px 20px;
+    position: relative;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.footer-social a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-social .social-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-social .social-icon.zalo {
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-info {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.info-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-certifications {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.certification-img {
+    height: 45px;
+}
+
+.footer-copyright {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.scroll-to-top {
+    background-color: #b8005a;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #8a0045;
+    transform: translateY(-5px);
+}
+
+/* Điều chỉnh responsive */
+@media (max-width: 768px) {
+    .footer-top, .footer-bottom, .footer-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-social {
+        margin-top: 15px;
+    }
+    .footer-certifications {
+        margin-top: 20px;
+    }
 }
 
 .lifestyle-section .carousel-inner img {
@@ -221,4 +712,102 @@
 }
 .border-pink {
   border: 2px solid var(--aeon-pink) !important;
+}
+/* Styling chung cho toàn bộ phần banner */
+.main-content-banner {
+    /* Màu nền xám nhạt lấy từ hình ảnh */
+    background-color: #f5f5f5; 
+    /* Tạo khoảng trống phía trên và dưới banner */
+    padding: 20px 0;
+}
+
+/* Hình ảnh banner */
+.main-content-banner .banner-image {
+    /* Đặt chiều rộng của ảnh là 50% */
+    width: 50%;
+    /* Chiều cao tự động để giữ tỷ lệ */
+    height: auto;
+    /* Căn giữa ảnh theo chiều ngang */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Khung chứa ảnh (sử dụng Flexbox để căn giữa ảnh) */
+.main-content-banner .image-wrapper {
+    /* Sử dụng Flexbox */
+    display: flex; 
+    /* Căn giữa ảnh theo chiều ngang */
+    justify-content: center; 
+    /* Căn giữa ảnh theo chiều dọc (nếu cần) */
+    align-items: center; 
+}
+
+/* Tiêu đề chính "AEON TUYỂN DỤNG" */
+.main-content-banner .main-title {
+    /* Kích thước chữ lớn */
+    font-size: 2.5rem;
+    /* Chữ in đậm */
+    font-weight: bold;
+    /* Màu chữ xám đậm */
+    color: #333;
+    /* Khoảng trống bên dưới */
+    margin-bottom: 10px;
+}
+
+/* Tiêu đề phụ "NUÔI DƯỠNG CHẤT RIÊNG..." */
+.main-content-banner .sub-title {
+    /* Kích thước chữ nhỏ hơn */
+    font-size: 1.5rem;
+    /* Màu chữ xám */
+    color: #555;
+    /* Khoảng trống bên dưới */
+    margin-bottom: 20px;
+}
+
+/* Đoạn mô tả */
+.main-content-banner .description {
+    /* Kích thước chữ chuẩn */
+    font-size: 1rem;
+    /* Khoảng cách giữa các dòng */
+    line-height: 1.6;
+    /* Màu chữ xám nhạt */
+    color: #666;
+    /* Khoảng trống bên dưới */
+    margin-bottom: 30px;
+}
+
+/* Nút kêu gọi hành động (Call-to-Action) */
+.main-content-banner .btn-call-to-action {
+    /* Màu nền hồng/tím đặc trưng của AEON */
+    background-color: #b8005a; 
+    /* Màu chữ trắng */
+    color: #fff;
+    /* Khoảng đệm bên trong nút */
+    padding: 15px 30px;
+    /* Bo tròn góc để tạo hình viên thuốc */
+    border-radius: 50px;
+    /* Chữ in đậm */
+    font-weight: bold;
+    /* Kích thước chữ lớn hơn */
+    font-size: 1.1rem;
+    /* Bỏ gạch chân của link */
+    text-decoration: none;
+    /* Tạo hiệu ứng chuyển màu mượt mà khi di chuột */
+    transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột qua nút */
+.main-content-banner .btn-call-to-action:hover {
+    /* Đổi sang màu nền đậm hơn */
+    background-color: #8a0045; 
+}
+
+/* Các điều chỉnh cho màn hình nhỏ hơn (Responsive) */
+@media (max-width: 992px) {
+    .main-content-banner .text-content-wrapper {
+        /* Căn giữa toàn bộ nội dung văn bản */
+        text-align: center;
+        /* Điều chỉnh khoảng đệm cho màn hình nhỏ */
+        padding: 30px 20px;
+    }
 }
