@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navbar AEON Giống Ảnh (Đã chỉnh)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding-top: 80px; 
+    
+    }
+
+    .navbar-photos {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ebebeb;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .navbar-photos.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 9999;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .navbar-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 20px;
+    }
+
+    .navbar-brand img {
+      height: 36px;
+      /* nếu ảnh logo lớn, hãy chỉnh lại cho phù hợp */
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      max-width: 600px;
+      margin: 0 20px;
+      position: relative;
+    }
+
+    .search-box input {
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      padding: 5px 40px 5px 15px;
+      width: 100%;
+      height: 38px;
+    }
+
+    .search-box i {
+      position: absolute;
+      right: 15px;
+      color: #aaa;
+    }
+
+    .btn-locate {
+      background-color: #e6007e;
+      color: #ffffff;
+      border: none;
+      border-radius: 20px;
+      padding: 8px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .navbar-menu {
+      border-top: 1px solid #f2f2f2;
+      padding: 5px 20px;
+    }
+
+    .navbar-menu .nav-link {
+      color: #333333;
+      margin: 0 15px;
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .navbar-menu .nav-link:hover {
+      color: #e6007e;
+    }
+
+    /* Hover để mở dropdown trên desktop */
+    @media (min-width: 992px) {
+      .navbar-menu .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .search-box {
+        margin: 10px 0;
+      }
+      .btn-locate {
+        margin-top: 10px;
+      }
+      .navbar-menu {
+        text-align: center;
+      }
+    }
+      .carousel-inner img {
+    height: 300px;           /* chiều cao slideshow */
+    object-fit: cover;       /* cắt ảnh vừa khung */
+  }
+  .static-banner img {
+    height: 300px;           /* chiều cao bằng slideshow */
+    object-fit: cover;       /* cắt ảnh giữ tỉ lệ */
+    width: 100%;             /* phủ kín cột */
+  }
+.brand-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.brand-item {
+  position: relative;
+  width: 150px; /* đặt kích thước ảnh */
+  height: 100px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.brand-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(128,0,128,0.7); /* màu tím mờ */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.brand-item:hover .overlay {
+  opacity: 1;
+
+}
+.aeon-section header {
+  background: #f5f5f5;
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.aeon-section .container {
+  display: flex;
+  padding: 20px;
+}
+
+.aeon-section .sidebar {
+  width: 30%;
+  padding-right: 20px;
+}
+
+.aeon-section .sidebar input,
+.aeon-section .sidebar select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.aeon-section .sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.aeon-section .sidebar li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.aeon-section .sidebar li h4 {
+  margin: 0;
+  color: #c20055;
+}
+
+.aeon-section .sidebar li p {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+.aeon-section .sidebar li span {
+  display: block;
+  font-size: 12px;
+  color: gray;
+}
+
+.aeon-section .main {
+  width: 70%;
+}
+
+.aeon-section .tabs {
+  display: flex;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 20px;
+}
+
+.aeon-section .tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  font-weight: bold;
+}
+
+.aeon-section .tab.active {
+  color: #c20055;
+  border-bottom: 3px solid #c20055;
+}
+
+.aeon-section .card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.aeon-section .card img {
+  width: 100%;
+  display: block;
+}
+
+.aeon-section .card-content {
+  padding: 15px;
+}
+
+.aeon-section .card-content h3 {
+  margin: 0;
+  color: #c20055;
+}
+
+.aeon-section .card-content p {
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.aeon-section .card-content a {
+  display: inline-block;
+  background: #c20055;
+  color: #fff;
+  padding: 8px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.contact-section {
+  display: flex;
+  gap: 20px;
+  align-items: stretch; /* 2 bên cùng chiều cao */
+  padding: 20px;
+}
+
+.contact-section .left,
+.contact-section .right {
+  flex: 1; /* Chia đều 2 cột */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Giới hạn chiều rộng bên trái (có thể điều chỉnh) */
+/* Màu hồng chính */
+.text-pink {
+  color: #e6007e !important;
+}
+
+/* Card liên hệ chung */
+.contact-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Card nhỏ cho các thông tin con */
+.contact-card.small-card {
+  padding: 15px 20px;
+  font-size: 0.9rem;
+}
+
+/* Card hình minh họa */
+.illustration-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: inline-block;
+}
+
+/* Nút màu hồng nền */
+.btn-pink {
+  background-color: #e6007e;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  box-shadow: 0 3px 8px rgba(230, 0, 126, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.btn-pink:hover,
+.btn-pink:focus {
+  background-color: #c20055;
+  color: #fff;
+}
+
+/* Nút viền hồng */
+.btn-outline-pink {
+  color: #e6007e;
+  border: 2px solid #e6007e;
+  background-color: transparent;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-pink:hover,
+.btn-outline-pink:focus {
+  background-color: #e6007e;
+  color: #fff;
+  border-color: #c20055;
+}
+
+/* Đảm bảo link bên trong card có màu hồng */
+.contact-card a {
+  color: #e6007e;
+  text-decoration: none;
+}
+
+.contact-card a:hover,
+.contact-card a:focus {
+  text-decoration: underline;
+}
+
+/* Link Liên hệ chào hàng */
+.contact-card.mt-3 a.contact-card {
+  cursor: pointer;
+  border: 1px solid #e6007e;
+  background-color: #fff;
+  color: #e6007e;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 15px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-card.mt-3 a.contact-card:hover,
+.contact-card.mt-3 a.contact-card:focus {
+  background-color: #e6007e;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Responsive nhỏ hơn 576px: Nút full width */
+@media (max-width: 575.98px) {
+  .btn-pink, .btn-outline-pink {
+    width: 100%;
+  }
+}
+
+/* Thêm khoảng cách cho tiêu đề card */
+.contact-card h6 {
+  margin-bottom: 15px;
+}
+
+/* Phần text để cách nhau */
+.contact-card p {
+  margin-bottom: 0.5rem;
+}
+
+/* Icon (☎, ✉, →) căn chỉnh cho đẹp */
+.contact-card p span,
+.contact-card p a {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+
+/* Container chính của footer */
+.footer {
+  background-color: #800080; /* tím đậm AEON */
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Container chứa nội dung footer */
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Lưới 3 cột */
+.footer-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Mỗi cột */
+.footer-grid .col {
+  flex: 1 1 300px;
+  min-width: 250px;
+}
+
+/* Cột trái và giữa */
+.footer-grid .col-left,
+.footer-grid .col-center {
+  color: #f0e6f7;
+}
+
+.footer-grid strong {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Link trong footer */
+.footer-link {
+  color: #ff79c6;
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  text-decoration: underline;
+}
+
+/* Cột phải (mạng xã hội + badges) */
+.footer-grid .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Mạng xã hội */
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.socials a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #e6007e;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.socials a:hover,
+.socials a:focus {
+  background-color: #c20055;
+  outline: none;
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  gap: 15px;
+}
+
+.badges .badge img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Footer bottom */
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #d9b3d9;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Responsive - nhỏ hơn 768px */
+@media (max-width: 767px) {
+  .footer-grid {
+    flex-direction: column;
+  }
+  
+  .footer-grid .col {
+    min-width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<nav id="navbarAEON" class="navbar-photos sticky">
+  <!-- Hàng trên: Logo + Search + Ngôn ngữ + Nút -->
+  <div class="navbar-top container-fluid d-flex align-items-center">
+    <!-- Logo -->
+    <a class="navbar-brand me-3" href="#">
+      <img src="media/anh_eon.png" alt="AEON Logo" style="height:36px; width:auto;">
+    </a>
+
+    <!-- Ô tìm kiếm -->
+    <div class="search-box flex-grow-1">
+      <input type="text" placeholder="Nhập nội dung tìm kiếm">
+      <i class="bi bi-search"></i>
+    </div>
+
+    <!-- Dropdown ngôn ngữ -->
+    <div class="dropdown ms-3">
+      <button class="btn btn-light dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        VI
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="langDropdown">
+        <li><a class="dropdown-item" href="#">VI</a></li>
+        <li><a class="dropdown-item" href="#">EN</a></li>
+      </ul>
+    </div>
+
+    <!-- Nút tìm AEON -->
+    <button class="btn btn-locate ms-3">TÌM AEON GẦN BẠN</button>
+  </div>
+
+  <!-- Hàng dưới: Menu -->
+  <div class="navbar-menu text-center">
+    <ul class="nav justify-content-center flex-wrap">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="promoDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Khuyến mãi & Sự kiện
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="promoDropdown1">
+          <li><a class="dropdown-item" href="#">Khuyến mãi đang diễn ra</a></li>
+          <li><a class="dropdown-item" href="#">Sự kiện sắp tới</a></li>
+          <li><a class="dropdown-item" href="#">Tin tức khuyến mãi</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="promoDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Chương trình thành viên
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="promoDropdown2">
+          <li><a class="dropdown-item" href="#">Tích điểm nhận quà</a></li>
+          <li><a class="dropdown-item" href="#">Gia đình có kids</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="promoDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dịch vụ
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="promoDropdown3">
+          <li><a class="dropdown-item" href="#">Mua sắm đa kênh</a></li>
+          <li><a class="dropdown-item" href="#">Thanh toán không tiền mặt</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#">Thương hiệu AEON</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Cẩm nang AEON</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Về AEON Việt Nam</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Tuyển dụng</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Nếu muốn navbar sticky lúc cuộn xuống, bỏ 'sticky' class trong HTML và dùng đoạn này
+  $(window).on('scroll', function() {
+    if ($(this).scrollTop() > 50) {
+      $('#navbarAEON').addClass('sticky');
+    } else {
+      $('#navbarAEON').removeClass('sticky');
+    }
+  });
+</script>
+
+
+
+<div class="container mt-5 pt-5">
+  <div class="row g-3">
+
+    <!-- Slideshow -->
+    <div class="col-md-8">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000" style="height:350px;">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img src="media/anh1_eon .png" class="d-block w-100 h-100" style="object-fit:cover;" alt="Slide 1">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="media/anh2_eon.png" class="d-block w-100 h-100" style="object-fit:cover;" alt="Slide 2">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="media/anh3_eon.png" class="d-block w-100 h-100" style="object-fit:cover;" alt="Slide 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Ảnh tĩnh -->
+    <div class="col-md-4">
+      <img src="media/anh3_eon.png" class="w-100 h-100 rounded shadow" style="height:350px; object-fit:cover;" alt="Ảnh tĩnh">
+    </div>
+
+  </div>
+</div>
+<div class="container mt-5">
+  <div class="row align-items-center">
+    <!-- Cột trái: nội dung (6/12) -->
+    <div class="col-md-6">
+      <h2 class="fw-bold">GIÁ THẤP MỖI NGÀY<br>MUA SẮM MẠNH TAY</h2>
+      <p>
+        Tận hưởng sản phẩm chất lượng<br>
+        với giá thấp quanh năm,<br>
+        dành cho mọi khách hàng của AEON Việt Nam
+      </p>
+      <a href="#" class="btn btn-primary rounded-pill px-4 py-2"
+         style="background-color:#b10e7e; border:none;">
+        XEM THÊM
+      </a>
+    </div>
+
+    <!-- Cột phải: slideshow (6/12) -->
+    <div class="col-md-6">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000" style="height:350px;">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img src="media/anh1_eon .png" class="d-block w-100 h-100" style="object-fit:cover;" alt="Slide 1">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="media/anh2_eon.png" class="d-block w-100 h-100" style="object-fit:cover;" alt="Slide 2">
+          </div>
+          <div class="carousel-item h-100">
+            <img src="media/anh3_eon.png" class="d-block w-100 h-100" style="object-fit:cover;" alt="Slide 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Phần Khuyến mãi & Sự kiện -->
+<div class="container mt-5">
+  <h2 class="text-center fw-bold mb-4">KHUYẾN MÃI & SỰ KIỆN</h2>
+
+  <div class="row g-4">
+    <!-- Box 1 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 border-0 shadow-sm">
+        <img src="media/anh5_eon.png" class="card-img-top" alt="Khuyến mãi 1">
+        
+      </div>
+    </div>
+
+    <!-- Box 2 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 border-0 shadow-sm">
+        <img src="media/anh6_eon.png" class="card-img-top" alt="Khuyến mãi 2">
+    
+      </div>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 border-0 shadow-sm">
+        <img src="media/anh5_eon.png" class="card-img-top" alt="Khuyến mãi 3">
+      
+      </div>
+    </div>
+
+    <!-- Box 4 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card h-100 border-0 shadow-sm">
+        <img src="media/anh6_eon.png" class="card-img-top" alt="Khuyến mãi 4">
+    
+      </div>
+      
+    </div>
+  </div>
+</div>
+<div class="text-center mt-4">
+    <a href="#" class="btn btn-outline-danger px-4 fw-bold">Xem thêm</a>
+  </div>
+  <div class="container text-center my-5">
+  <h2>DỊCH VỤ TIỆN ÍCH</h2>
+  <p>
+    Hệ thống TTBHTH & Siêu thị AEON tự hào mang đến cho khách hàng <br>
+    trải nghiệm mua sắm đa dạng và dịch vụ chất lượng cao chuẩn Nhật Bản.
+  </p>
+
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <h5>THANH TOÁN<br>KHÔNG TIỀN MẶT</h5>
+      
+      <img src="media/anh8_eon.png" alt="VNPAY" width="300">
+    </div>
+    <div class="col-md-4">
+      <h5>MUA SẮM ONLINE</h5>
+      <img src="media/anh7_eon.png" alt="Mua sắm online" width="300">
+    </div>
+    <div class="col-md-4">
+      <h5>GIAO HÀNG<br>VÀ LẮP ĐẶT</h5>
+      <img src="media/anh8_eon.png" alt="Giao hàng" width="300">
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <button class="btn btn-primary" style="background-color:#c2187a; border:none; border-radius:30px; padding:15px 40px;">
+      KHÁM PHÁ TẤT CẢ DỊCH VỤ TẠI AEON
+    </button>
+  </div>
+</div>
+
+<div class="container text-center my-5">
+  <h5 style="text-align: left;">@AEONVN.LIFESTYLE</h5>
+<h2 class="fw-bold" style="text-align: left;">PHONG CÁCH SỐNG</h2>
+
+  <!-- Bắt đầu hàng ngang -->
+  <div class="row align-items-center mt-4">
+    <!-- Cột carousel: 8/12 -->
+    <div class="col-md-8">
+      <div id="lifestyleCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="media/anh3_eon.png" class="d-block w-100 rounded" alt="Ảnh 1">
+              </div>
+              <div class="col-md-4">
+                <img src="media/anh3_eon.png" class="d-block w-100 rounded" alt="Ảnh 2">
+              </div>
+              <div class="col-md-4">
+                <img src="media/anh4_eon.png" class="d-block w-100 rounded" alt="Ảnh 3">
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4">
+                <img src="media/anh5_eon.png" class="d-block w-100 rounded" alt="Ảnh 4">
+              </div>
+              <div class="col-md-4">
+                <img src="media/anh6_eon.png" class="d-block w-100 rounded" alt="Ảnh 5">
+              </div>
+              <div class="col-md-4">
+                <img src="media/anh8_eon.png" class="d-block w-100 rounded" alt="Ảnh 6">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nút điều hướng -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#lifestyleCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#lifestyleCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cột ảnh tĩnh: 4/12 -->
+    <div class="col-md-4">
+      <img src="media/anh9_eon.png" class="w-100 h-100 rounded shadow" style="height:350px; object-fit:cover;" alt="Ảnh tĩnh">
+    </div>
+  </div>
+
+  <!-- Nút bên dưới -->
+  <div class="mt-4">
+    <button class="btn btn-lg" style="background-color:#c2187a; color:#fff; border-radius:30px; padding:12px 40px;">
+      KHÁM PHÁ
+    </button>
+  </div>
+</div>
+<!-- required: bootstrap css/js + bootstrap-icons loaded in <head> -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> -->
+
+<div class="container mt-5">
+  <h2 class="fw-bold">TIN TỨC</h2>
+
+  <div class="row g-4 align-items-start mt-3">
+    <!-- LEFT: main news (8/12) -->
+    <div class="col-md-8">
+      <div class="d-flex justify-content-between align-items-start mb-3">
+        <h5 class="fw-bold mb-0">BẢN TIN AEON VIỆT NAM</h5>
+        <a href="#" style="color:#d63384; font-weight:700; text-decoration:none;">XEM TẤT CẢ »</a>
+      </div>
+
+      <!-- 3 cards in one row -->
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="card border-0">
+            <img src="media/anh7_eon.png" class="card-img-top rounded" style="height:160px; object-fit:cover;" alt="news1">
+            <div class="card-body px-0 pt-2">
+              <h6 class="card-title fw-bold">AEON VIỆT NAM TRIỂN KHAI NGÀY KHÔNG TÚI NI-LÔNG 2025</h6>
+              <p class="text-muted small mb-0"><i class="bi bi-clock me-1"></i>03.07.2025</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0">
+            <img src="media/anh8_eon.png" class="card-img-top rounded" style="height:160px; object-fit:cover;" alt="news2">
+            <div class="card-body px-0 pt-2">
+              <h6 class="card-title fw-bold">CUỘC THI HÙNG BIỆN TIẾNG ANH 2025: CHẮP CÁNH ƯỚC MƠ</h6>
+              <p class="text-muted small mb-0"><i class="bi bi-clock me-1"></i>25.06.2025</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0">
+            <img src="media/anh9_eon.png" class="card-img-top rounded" style="height:160px; object-fit:cover;" alt="news3">
+            <div class="card-body px-0 pt-2">
+              <h6 class="card-title fw-bold">AEON VIỆT NAM CÙNG CỘNG ĐỒNG NHẶT RÁC</h6>
+              <p class="text-muted small mb-0"><i class="bi bi-clock me-1"></i>05.06.2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- pagination center -->
+      <div class="d-flex justify-content-center align-items-center mt-4 gap-3">
+        <button class="btn btn-link text-dark p-0" aria-label="prev"><i class="bi bi-chevron-left" style="font-size:1.2rem"></i></button>
+        <span class="text-muted">1 / 4</span>
+        <button class="btn btn-link text-dark p-0" aria-label="next"><i class="bi bi-chevron-right" style="font-size:1.2rem"></i></button>
+      </div>
+    </div>
+
+    <!-- RIGHT: corporate newsletter (4/12) -->
+    <div class="col-md-4">
+      <div class="p-3 rounded" style="background:#fdeaf2;">
+        <h6 class="fw-bold mb-3">BẢN TIN TẬP ĐOÀN AEON</h6>
+
+        <ul class="list-unstyled mb-0">
+          <li class="d-flex justify-content-between align-items-center py-3 border-bottom">
+            <a href="#" class="text-dark text-decoration-none">Vol.706 – “Loại bỏ” đến “Tái chế” mỗi ngày</a>
+            <i class="bi bi-chevron-right"></i>
+          </li>
+          <li class="d-flex justify-content-between align-items-center py-3 border-bottom">
+            <a href="#" class="text-dark text-decoration-none">Vol.707 – Bảo tồn Di sản Thế giới</a>
+            <i class="bi bi-chevron-right"></i>
+          </li>
+          <li class="d-flex justify-content-between align-items-center py-3 border-bottom">
+            <a href="#" class="text-dark text-decoration-none">Vol.704 – Lối sống bền vững</a>
+            <i class="bi bi-chevron-right"></i>
+          </li>
+          <li class="d-flex justify-content-between align-items-center py-3">
+            <a href="#" class="text-dark text-decoration-none">Vol.702 – Hoạt động trồng cây</a>
+            <i class="bi bi-chevron-right"></i>
+          </li>
+        </ul>
+
+        <a href="#" class="d-block mt-3 fw-bold" style="color:#d63384; text-decoration:none;">XEM TẤT CẢ »</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container my-5">
+  <div class="row text-center">
+    <div class="col-12">
+      <h2 class="fw-bold">Thương hiệu AEON</h2>
+      <p>
+        Cùng khám phá loạt Thương hiệu riêng chuẩn Nhật từ AEON, mang đến các sản phẩm chất lượng cùng trải nghiệm đa dạng cho Khách hàng.
+      </p>
+    </div>
+  </div>
+ <div class="row justify-content-center">
+    <!-- Hàng 1 -->
+    <div class="col-6 col-md-2 mb-4">
+      <div class="brand-item">
+        <img src="media/anh2_eon.png" alt="Topvalu" class="img-fluid rounded">
+        <div class="overlay">XEM THÊM</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-2 mb-4">
+      <div class="brand-item">
+        <img src="media/anh4_eon.png" alt="Home Coordy" class="img-fluid rounded">
+        <div class="overlay">XEM THÊM</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-2 mb-4">
+      <div class="brand-item">
+        <img src="media/anh3_eon.png" alt="Thương hiệu 3" class="img-fluid rounded">
+        <div class="overlay">XEM THÊM</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-2 mb-4">
+      <div class="brand-item">
+        <img src="media/anh5_eon.png" alt="Thương hiệu 4" class="img-fluid rounded">
+        <div class="overlay">XEM THÊM</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-2 mb-4">
+      <div class="brand-item">
+        <img src="media/anh6_eon.png" alt="Thương hiệu 5" class="img-fluid rounded">
+        <div class="overlay">XEM THÊM</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <!-- Hàng 2 -->
+    <div class="col-6 col-md-2 mb-4">
+      <div class="brand-item">
+        <img src="media/anh7_eon.png" alt="Thương hiệu 6" class="img-fluid rounded">
+        <div class="overlay">XEM THÊM</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-2 mb-4">
+      <div class="brand-item">
+        <img src="media/anh8_eon.png" alt="Thương hiệu 7" class="img-fluid rounded">
+        <div class="overlay">XEM THÊM</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-2 mb-4">
+      <div class="brand-item">
+        <img src="media/anh9_eon.png" alt="Thương hiệu 8" class="img-fluid rounded">
+        <div class="overlay">XEM THÊM</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-2 mb-4">
+      <div class="brand-item">
+        <img src="media/anh2_eon.png" alt="Thương hiệu 9" class="img-fluid rounded">
+        <div class="overlay">XEM THÊM</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-2 mb-4">
+      <div class="brand-item">
+        <img src="media/anh4_eon.png" alt="Thương hiệu 10" class="img-fluid rounded">
+        <div class="overlay">XEM THÊM</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="aeon-section">
+  <header>TÌM AEON GẦN BẠN</header>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <input type="text" placeholder="Search...">
+      <select>
+        <option>Tỉnh/Thành phố</option>
+      </select>
+      <select>
+        <option>Loại hình Siêu thị</option>
+      </select>
+      
+      <ul>
+        <li>
+          <h4>AEON TÂN PHÚ CELADON</h4>
+          <p>30 Đ. Tân Thắng, P. Tân Sơn Nhì, TP.HCM</p>
+          <span>🕒 8AM - 10PM</span>
+        </li>
+        <li>
+          <h4>AEON BÌNH TÂN</h4>
+          <p>1 Đường Số 17A, P. An Lạc, TP.HCM</p>
+          <span>🕒 8AM - 10PM</span>
+        </li>
+        <li>
+          <h4>AEON LONG BIÊN</h4>
+          <p>27 Đường Cổ Linh, P. Long Biên, Hà Nội</p>
+          <span>🕒 8AM - 10PM</span>
+        </li>
+        <li>
+          <h4>AEON BÌNH DƯƠNG CANARY</h4>
+          <p>1 Đại lộ Bình Dương, P. Thuận Giao, Bình Dương</p>
+          <span>🕒 8AM - 10PM</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="main">
+      <div class="tabs">
+        <div class="tab active">Tổng Quan</div>
+        <div class="tab">Bản Đồ Vị Trí</div>
+        <div class="tab">Bản Đồ Bố Trí</div>
+      </div>
+
+      <div class="card">
+        <img src="media/anh8_eon.png"height=220px alt="AEON Mall Tân Phú">
+        <div class="card-content">
+          <h3>AEON Tân Phú Celadon</h3>
+          <p>Liên hệ DVKH 1800.888.886 - Zalo: 0366 565454</p>
+          <p>Với diện tích hơn 70.000 m², trung tâm thương mại AEON MALL Tân Phú Celadon là một trong những khu phức hợp hiện đại với nhiều tiện ích hoàn hảo cho gia đình như siêu thị, cửa hàng mỹ phẩm, thời trang, ẩm thực, rạp chiếu phim, khu vui chơi…</p>
+          <a href="#">WEBSITE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<img src="media/anh10_eon.png" class="w-100"style="height: 400px; width: 200px; object-fit: cover;"
+alt="Banner cuối trang">
+<section class="contact-section py-5 bg-light">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Bên trái: Thông tin liên hệ -->
+      <div class="col-lg-8">
+        <!-- Văn phòng chính -->
+        <div class="contact-card mb-3">
+          <h6 class="fw-bold text-pink">Văn Phòng Chính</h6>
+          <p class="mb-1">
+            <strong> CÔNG TY TNHH AEON VIỆT NAM</strong><br>
+            Số 30 Đường Tân Thắng, Phường Tân Sơn Nhì, Thành phố Hồ Chí Minh
+          </p>
+          <p class="mb-1">Thứ 2 - Thứ 6 (8:30 - 17:30)</p>
+          <p class="mb-1">
+            ☎ <span>(028) 6269 2012</span> &nbsp;&nbsp;
+             <span>(028) 6288 7711</span>
+          </p>
+          <p class="mb-0">✉ <a href="mailto:contact@aeon.com.vn">contact@aeon.com.vn</a></p>
+        </div>
+
+        <div class="row g-3">
+          <!-- Phòng truyền thông -->
+          <div class="col-md-6">
+            <div class="contact-card small-card">
+              <h6 class="fw-bold text-pink">Phòng truyền thông & đối ngoại</h6>
+              <p class="mb-1">☎ (033) 217 9797</p>
+              <p class="mb-0">✉ <a href="mailto:phongtruyenthong@aeon.com.vn">phongtruyenthong@aeon.com.vn</a></p>
+            </div>
+          </div>
+
+          <!-- Liên hệ quảng cáo -->
+          <div class="col-md-6">
+            <div class="contact-card small-card">
+              <h6 class="fw-bold text-pink">Liên hệ quảng cáo</h6>
+              <p class="mb-1">☎ 028 6288 7711 - Ex: 859</p>
+              <p class="mb-1">✉ <a href="mailto:booking.media@aeon.com.vn">booking.media@aeon.com.vn</a></p>
+              <p class="mb-0"><a href="#" class="text-pink">🌐 aeon.com.vn/media</a></p>
+            </div>
+          </div>
+
+          <!-- Chăm sóc khách hàng -->
+          <div class="col-md-6">
+            <div class="contact-card small-card">
+              <h6 class="fw-bold text-pink">Phòng Chăm sóc khách hàng</h6>
+              <p class="mb-1">☎ 1800.888.886</p>
+              <p class="mb-0">✉ <a href="mailto:contact@aeon.com.vn">contact@aeon.com.vn</a></p>
+            </div>
+          </div>
+
+          <!-- Hotline mua hàng -->
+          <div class="col-md-6">
+            <div class="contact-card small-card">
+              <h6 class="fw-bold text-pink">Hotline mua hàng</h6>
+              <p class="mb-0">☎ 1800.888.699</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Liên hệ chào hàng -->
+        <div class="contact-card mt-3 d-flex justify-content-between align-items-center">
+         <!-- Liên hệ chào hàng -->
+<a href="#" class="contact-card mt-3 d-flex justify-content-between align-items-center text-decoration-none btn btn-light">
+  <span class="fw-bold">Liên hệ chào hàng cho AEON Việt Nam</span>
+  <span class="fs-5 text-pink">&rarr;</span>
+</a>
+
+        </div>
+      </div>
+
+      <!-- Bên phải: Hình minh họa -->
+<div class="col-lg-4 text-center">
+        <div class="illustration-card p-4">
+          <img src="media/anh11_eon.png" class="img-fluid" alt="AEON Illustration">
+        </div>
+      </div>
+    </div>
+
+    <!-- Các nút hành động -->
+    <div class="row mt-4 g-3">
+  <div class="col-md-4">
+    <button class="btn w-100" style="background-color: #e6007e; color: #fff; font-weight: 600; border-radius: 25px; border: none; padding: 12px 20px; box-shadow: 0 3px 8px rgba(230, 0, 126, 0.3);">HỒ SƠ NĂNG LỰC CỦA CHÚNG TÔI</button>
+  </div>
+  <div class="col-md-4">
+    <button class="btn w-100" style="background-color: #e6007e; color: #fff; font-weight: 600; border-radius: 25px; border: none; padding: 12px 20px; box-shadow: 0 3px 8px rgba(230, 0, 126, 0.3);">CHÍNH SÁCH BẢO VỆ DỮ LIỆU CÁ NHÂN</button>
+  </div>
+  <div class="col-md-2">
+    <button class="btn w-100" style="color: #e6007e; border: 2px solid #e6007e; background-color: transparent; font-weight: 600; border-radius: 25px; padding: 10px 20px;">CHIA SẺ CÙNG AEON</button>
+  </div>
+  <div class="col-md-2">
+    <button class="btn w-100" style="color: #e6007e; border: 2px solid #e6007e; background-color: transparent; font-weight: 600; border-radius: 25px; padding: 10px 20px;">ĐỔI TRẢ/HOÀN TIỀN</button>
+  </div>
+</div>
+
+</section>
+
+
+  <!-- Bên phải (ảnh minh họa) -->
+ 
+
+</section>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Cột trái: thông tin công ty -->
+        <div class="col col-left">
+          <strong>Công ty TNHH Aeon Việt Nam</strong>
+          <p>Công ty TNHH Aeon Việt Nam thành lập và hoạt động theo Giấy chứng nhận đăng ký doanh nghiệp số 0311241512 do Ủy ban nhân dân Thành phố Hồ Chí Minh cấp lần đầu tiên ngày 07/10/2011.</p>
+          <p>Điện thoại: <strong>(028) 62887711</strong> | Lĩnh vực kinh doanh: <strong>Bán lẻ</strong></p>
+        </div>
+
+        <!-- Cột giữa: địa chỉ miền, người chịu trách nhiệm -->
+        <div class="col col-center">
+          <strong>Thông tin website & liên hệ</strong>
+          <p>Địa chỉ tên miền: <a class="footer-link" href="https://www.aeon.com.vn" target="_blank" rel="noopener">www.aeon.com.vn</a></p>
+          <p>Người chịu trách nhiệm: <strong>Phòng Marketing</strong></p>
+          <p>Bản quyền thuộc Aeon Việt Nam. Website: <a class="footer-link" href="https://www.aeon.com.vn" target="_blank" rel="noopener">www.aeon.com.vn</a></p>
+        </div>
+
+        <!-- Cột phải: icon mạng xã hội, badges -->
+       <!-- Thêm Bootstrap CSS và Bootstrap Icons trong <head> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Phần icon mạng xã hội -->
+<div class="col right">
+  <div class="d-flex gap-3" aria-label="Kênh mạng xã hội">
+    <a href="#" title="Facebook" aria-label="Facebook"
+       class="text-white bg-danger rounded-circle d-flex align-items-center justify-content-center"
+       style="width:40px; height:40px;">
+      <i class="bi bi-facebook fs-4"></i>
+    </a>
+    <a href="#" title="Instagram" aria-label="Instagram"
+       class="text-white bg-danger rounded-circle d-flex align-items-center justify-content-center"
+       style="width:40px; height:40px;">
+      <i class="bi bi-instagram fs-4"></i>
+    </a>
+    <a href="#" title="Zalo" aria-label="Zalo"
+       class="text-white bg-danger rounded-circle d-flex align-items-center justify-content-center"
+       style="width:40px; height:40px;">
+      <i class="bi bi-chat-dots fs-4"></i> <!-- Tạm thay cho Zalo -->
+    </a>
+    <a href="#" title="YouTube" aria-label="YouTube"
+       class="text-white bg-danger rounded-circle d-flex align-items-center justify-content-center"
+       style="width:40px; height:40px;">
+      <i class="bi bi-youtube fs-4"></i>
+    </a>
+    <a href="#" title="TikTok" aria-label="TikTok"
+       class="text-white bg-danger rounded-circle d-flex align-items-center justify-content-center"
+       style="width:40px; height:40px;">
+      <i class="bi bi-music-note-beamed fs-4"></i> <!-- Tạm thay TikTok -->
+    </a>
+  </div>
+
+
+
+          <div class="badges" aria-hidden="false">
+            <!-- Thay src bằng ảnh thực tế của badge -->
+            <div class="badge"><img src="media/anh7_eon.png"  height="50px" alt="DMCA protected"></div>
+            <div class="badge"><img src="media/anh8_eon.png" height="50px" alt="Đã thông báo Bộ Công Thương"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <div>Copyright © AEON VIETNAM Co., Ltd</div>
+        <div>We are AEON — Planting Seeds of Growth</div>
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>
