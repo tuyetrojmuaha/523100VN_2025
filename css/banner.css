@@ -64,15 +64,18 @@
     }
 
     /* Menu chính */
+
     nav {
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      border-bottom: 1px solid #eee;
-      position: relative;
-      z-index: 10;
-    }
+  position: sticky; /* giữ sticky */
+  top: 0;
+  z-index: 999; /* đảm bảo nổi trên các phần tử khác */
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  border-bottom: 1px solid #eee;
+}
 
     nav ul {
       list-style: none;
