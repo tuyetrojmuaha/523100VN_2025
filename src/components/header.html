@@ -1,0 +1,353 @@
+<!-- <!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEON Store Locator</title>
+    <style>
+        :root {
+            --aeon-pink: #d94997;
+            --aeon-light-pink: #fbebf6;
+            --aeon-dark-text: #4a4a4a;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+
+        .store-locator-page {
+            max-width: 1400px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* --- Thanh điều hướng chính --- */
+        .main-nav {
+            display: flex;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .nav-item {
+            flex: 1;
+            text-align: center;
+            padding: 15px 0;
+            text-decoration: none;
+            color: var(--aeon-dark-text);
+            font-weight: bold;
+            border-right: 1px solid #ddd;
+        }
+
+        .nav-item:last-child {
+            border-right: none;
+        }
+
+        .nav-item.active {
+            background-color: var(--aeon-pink);
+            color: #fff;
+        }
+
+        /* --- Nội dung chính --- */
+        .main-content-wrapper {
+            display: flex;
+            position: relative;
+        }
+
+        /* Cột bên trái */
+        .left-sidebar {
+            width: 350px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .search-bar {
+            display: flex;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            border: none;
+            padding: 10px;
+            outline: none;
+        }
+
+        .search-bar button {
+            background: transparent;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .filter-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+
+        .filter-item {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .store-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .store-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .store-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .store-item.active {
+            background-color: var(--aeon-light-pink);
+            border-color: var(--aeon-pink);
+        }
+
+        .store-item.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: var(--aeon-pink);
+        }
+
+        .location-icon {
+            font-size: 1.5em;
+            margin-right: 15px;
+            color: var(--aeon-dark-text);
+        }
+
+        .store-details h4 {
+            margin: 0;
+            color: var(--aeon-dark-text);
+        }
+
+        .store-details p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .store-details .opening-hours {
+            font-weight: bold;
+            color: var(--aeon-dark-text);
+        }
+
+        /* Cột bên phải */
+        .right-panel {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .store-hero {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .store-hero img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-overlay h1 {
+            font-size: 2.5em;
+            margin: 0 0 10px;
+        }
+
+        .hero-overlay p {
+            margin: 0 0 15px;
+            font-weight: bold;
+        }
+
+        .website-btn {
+            background-color: var(--aeon-pink);
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .store-description {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* --- Floating App Promo --- */
+        .app-promo-box {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background-color: var(--aeon-pink);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .main-content-wrapper {
+                flex-direction: column;
+            }
+
+            .left-sidebar,
+            .right-panel {
+                width: 100%;
+                border-right: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="store-locator-page">
+
+        <nav class="main-nav">
+            <a href="#" class="nav-item active">Tổng Quan</a>
+            <a href="#" class="nav-item">Bản Đồ Vị Trí</a>
+            <a href="#" class="nav-item">Bản Đồ Sàn</a>
+        </nav>
+
+        <div class="main-content-wrapper">
+
+            <div class="left-sidebar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">🔍</button>
+                </div>
+                <div class="filter-options">
+                    <div class="filter-item">Tỉnh/Thành phố</div>
+                    <div class="filter-item">Loại hình siêu thị</div>
+                </div>
+
+                <div class="store-list">
+                    <div class="store-item active" 
+                        data-image-src="https://www.aeon.com.vn/wp-content/uploads/2021/08/tp-celadon.jpg"
+                        data-title="AEON TÂN PHÚ CELADON"
+                        data-contact="Liên hệ DVH 1800.888.886 - Zalo: 0366 565454"
+                        data-website="https://aeon.com.vn/tan-phu-celadon/">
+                        <span class="location-icon">📍</span>
+                        <div class="store-details">
+                            <h4>AEON TÂN PHÚ CELADON</h4>
+                            <p>30 D. Tân Thắng, Phường Tân Sơn Nhì, Thành phố Hồ Chí Minh, Việt Nam</p>
+                            <p class="opening-hours">⌚ Mở cửa: 8AM - 10PM</p>
+                        </div>
+                    </div>
+
+                    <div class="store-item"
+                        data-image-src="https://www.aeon.com.vn/wp-content/uploads/2021/08/aeon-binh-tan.jpg"
+                        data-title="AEON BÌNH TÂN"
+                        data-contact="Liên hệ DVH 1800.888.886 - Zalo: 0987 654321"
+                        data-website="https://aeonmall-tanphuceladon.com.vn/">
+                        <span class="location-icon">📍</span>
+                        <div class="store-details">
+                            <h4>AEON BÌNH TÂN</h4>
+                            <p>1 Đường Số 17A, Khu phố 11, Phường An Lạc, Thành phố Hồ Chí Minh, Việt Nam</p>
+                            <p class="opening-hours">⌚ Mở cửa: 8AM - 10PM</p>
+                        </div>
+                    </div>
+
+                    <div class="store-item"
+                        data-image-src="https://www.aeon.com.vn/wp-content/uploads/2021/08/aeon-long-bien.jpg"
+                        data-title="AEON LONG BIÊN"
+                        data-contact="Liên hệ DVH 1800.888.886 - Zalo: 0123 456789"
+                        data-website="https://aeon.com.vn/long-bien/">
+                        <span class="location-icon">📍</span>
+                        <div class="store-details">
+                            <h4>AEON LONG BIÊN</h4>
+                            <p>27 Đường Cổ Linh, Phường Long Biên, Thành phố Hà Nội, Việt Nam</p>
+                            <p class="opening-hours">⌚ Mở cửa: 8AM - 10PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="store-hero">
+                    <img id="hero-image" src="https://www.aeon.com.vn/wp-content/uploads/2021/08/tp-celadon.jpg" alt="AEON Tân Phú Celadon">
+                    <div class="hero-overlay">
+                        <h1 id="store-title">AEON Tân Phú Celadon</h1>
+                        <p id="store-contact">Liên hệ DVH 1800.888.886 - Zalo: 0366 565454</p>
+                        <a id="store-website-btn" href="#" class="website-btn">WEBSITE</a>
+                    </div>
+                </div>
+                <p class="store-description">Với diện tích hơn 70.000 m2, trung tâm thương mại AEON MALL Tân Phú Celadon là một trung tâm phức hợp với nhiều tiện ích hoàn hảo dành cho gia đình như siêu thị, cửa hàng mỹ phẩm, thời trang, đồ gia dụng, nhà hàng, rạp chiếu phim, khu vui chơi giải trí và các dịch vụ khác.</p>
+            </div>
+
+            <div class="app-promo-box">
+                TẢI APP<br>NGAY
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const storeItems = document.querySelectorAll('.store-item');
+
+            const heroImage = document.getElementById('hero-image');
+            const storeTitle = document.getElementById('store-title');
+            const storeContact = document.getElementById('store-contact');
+            const storeWebsiteBtn = document.getElementById('store-website-btn');
+
+            storeItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const currentActiveItem = document.querySelector('.store-item.active');
+                    if (currentActiveItem) {
+                        currentActiveItem.classList.remove('active');
+                    }
+                    this.classList.add('active');
+
+                    const newImageSrc = this.dataset.imageSrc;
+                    const newTitle = this.dataset.title;
+                    const newContact = this.dataset.contact;
+                    const newWebsite = this.dataset.website;
+
+                    heroImage.src = newImageSrc;
+                    storeTitle.textContent = newTitle;
+                    storeContact.textContent = newContact;
+                    storeWebsiteBtn.href = newWebsite;
+                });
+            });
+        });
+    </script>
+</body>
+</html> -->

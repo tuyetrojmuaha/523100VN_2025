@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AEON - Header mẫu</title>
+<link rel="stylesheet" href="/aeon-homepage/src/styles/main.css">
+
+</head>
+<body>
+
+<header class="site-header">
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container top-inner">
+      <div class="logo">
+        <a href="#"><img src="styles/logo_vi.svg" alt="AEON"></a>
+      </div>
+      <div class="search">
+        <form action="#" method="get">
+          <input type="search" placeholder="Nhập nội dung tìm kiếm">
+          <button class="search-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35" stroke="#b40a87" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="11" r="6" stroke="#b40a87" stroke-width="2"/></svg>
+          </button>
+        </form>
+      </div>
+      <div class="controls">
+        <div class="lang-pill" id="langBtn">VI ▾</div>
+        <button class="cta">
+          <svg viewBox="0 0 24 24"><path d="M12 2C9.243 2 7 4.243 7 7c0 5.25 5 11 5 11s5-5.75 5-11c0-2.757-2.243-5-5-5zM12 9.5A2.5 2.5 0 1 1 12 4.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          <span>TÌM AEON GẦN BẠN</span>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle">☰</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAV -->
+  <nav class="main-nav">
+    <div class="container main-nav-inner">
+      <ul class="menu" id="mainMenu">
+        <li>
+          <a href="#" class="home-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">Khuyến mãi & Sự kiện ▾</a>
+          <ul>
+            <li><a href="#">Sale Tưng Bừng – Mừng Đại Lễ</a></li>
+            <li><a href="#">Trao Tết Trăng Tròn</a></li>
+            <li><a href="#">Thứ 4 Vui Vẻ</a></li>
+            <li><a href="#">Giá Thấp Mỗi Ngày</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Chương trình Thành viên ▾</a>
+          <ul>
+            <li><a href="#">WAON Points</a></li>
+            <li><a href="#">AEON Kids Club</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Dịch vụ ▾</a>
+          <ul>
+            <li><a href="#">Mua sắm Đa Kênh</a></li>
+            <li><a href="#">Thanh toán không tiền mặt</a></li>
+            <li><a href="#">Giao hàng & Lắp đặt</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Thương hiệu AEON</a></li>
+        <li><a href="#">Cẩm nang AEON</a></li>
+        <li><a href="#">Về AEON Việt Nam</a></li>
+        <li><a href="#">Tuyển Dụng</a></li>
+      </ul>
+    </div>
+    <div class="nav-bottom-line"></div>
+  </nav>
+</header>
+<main class="main-content">
+  <div class="container">
+    <!-- Slider + Side Banner -->
+    <div class="hero-section">
+      <!-- Slider -->
+      <div class="slider" id="slider">
+        <div class="slides">
+          <div class="slide active">
+            <img src="/aeon-homepage/src/styles/edlp_kv-pc-min-width-800px-34-1.png" alt="Slide 1">
+          </div>
+          <div class="slide">
+            <img src="/aeon-homepage/src/styles/edlp_kv-pc-min-width-800px-35-1.png" alt="Slide 2">
+          </div>
+          <div class="slide">
+            <img src="/aeon-homepage/src/styles/kv-top-banner-pc-min-width-800px-35-1.png" alt="Slide 3">
+          </div>
+        </div>
+        <!-- Controls -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        <div class="dots" id="dots"></div>
+      </div>
+
+      <!-- Side Banner -->
+      <div class="side-banner">
+        <a href="#">
+          <img src="/aeon-homepage/src/styles/tải xuống.jfif" alt="Cẩm nang mua sắm">
+        </a>
+      </div>
+    </div>
+
+    <!-- Promo Highlight -->
+ <section class="promo-highlight-wrapper">
+  <div class="container">
+    <div class="promo-highlight" id="promoSlider">
+      <div class="promo-left">
+        <h2 id="promo-title">THỨ 4 VUI VẺ <br> MUA THẬT RẺ</h2>
+        <p id="promo-desc">Ưu đãi các mặt hàng tươi sống vào thứ 4 hàng tuần – duy nhất tại AEON</p>
+        <a href="#" id="promo-link" class="btn-more">XEM THÊM</a>
+        <div class="promo-controls">
+          <button class="promo-prev">&#10094;</button>
+          <button class="promo-next">&#10095;</button>
+        </div>
+      </div>
+      <div class="promo-right">
+        <img id="promo-img" src="/aeon-homepage/src/styles/thu4.png" alt="Thứ 4 vui vẻ">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="service-section">
+    <h2>DỊCH VỤ TIỆN ÍCH</h2>
+    <p>Hệ thống TTBHTH & Siêu thị AEON tự hào mang đến cho khách hàng trải nghiệm mua sắm đa dạng và dịch vụ chất lượng cao chuẩn Nhật Bản.</p>
+    
+    <div class="service-container">
+        <!-- 1 -->
+        <div class="service-card">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/momo-3521497-2944938.png" alt="Thanh toán không tiền mặt">
+            <h3>THANH TOÁN <br>KHÔNG TIỀN MẶT</h3>
+        </div>
+        <!-- 2 -->
+        <div class="service-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" alt="Mua sắm online">
+            <h3>MUA SẮM ONLINE</h3>
+        </div>
+        <!-- 3 -->
+        <div class="service-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/679/679720.png" alt="Giao hàng và lắp đặt">
+            <h3>GIAO HÀNG <br>VÀ LẮP ĐẶT</h3>
+        </div>
+    </div>
+
+    <a href="#" class="btn-service">KHÁM PHÁ TẤT CẢ DỊCH VỤ TẠI AEON</a>
+    
+</section>
+<section class="lifestyle-section">
+  <!-- Bên trái -->
+  <div class="lifestyle-left">
+    <h2>@AEONVN.LIFESTYLE</h2>
+    <h3>PHONG CÁCH SỐNG</h3>
+
+    <div class="lifestyle-slider">
+      <div class="slides">
+        <div class="slide active">
+          <img src="/aeon-homepage/src/styles/instagram-1.jpg" alt="Lifestyle 1">
+        </div>
+
+        <div class="slide">
+          <img src="/aeon-homepage/src/styles/instagram-3.jpg" alt="Lifestyle 3">
+        </div>
+        <div class="slide">
+          <img src="/aeon-homepage/src/styles/instagram-4.jpg" alt="Lifestyle 4">
+        </div>
+      </div>
+      <button class="lifestyle-prev">&#10094;</button>
+      <button class="lifestyle-next">&#10095;</button>
+    </div>
+
+    <a href="#" class="btn-discover">KHÁM PHÁ</a>
+  </div>
+
+  <!-- Bên phải -->
+  <div class="lifestyle-right">
+    <h3>CẨM NANG AEON</h3>
+    <p>“Cẩm nang” ăn ngon, chơi vui, mua sắm hiệu quả tại AEON</p>
+    <a href="#" class="btn-findout">TÌM HIỂU NGAY</a>
+    <img src="/aeon-homepage/src/styles/mascot.png" alt="Mascot AEON" class="mascot-img">
+  </div>
+</section>
+<section class="brand-section">
+  <h2 class="brand-title">THƯƠNG HIỆU AEON</h2>
+  <p class="brand-subtitle">
+    Cùng khám phá loạt Thương hiệu riêng chuẩn Nhật từ AEON, mang đến các sản phẩm chất lượng cùng trải nghiệm đa dạng cho Khách hàng.
+  </p>
+
+  <div class="brand-grid">
+    <div class="brand-item"><img src="/aeon-homepage/src/styles/topvalu.png" alt="TopValu"></div>
+    <div class="brand-item"><img src="/aeon-homepage/src/styles/home.png" alt="Home Coordy"></div>
+    <div class="brand-item"><img src="/aeon-homepage/src/styles/giorno.png" alt="Giorno Mimosa"></div>
+    <div class="brand-item"><img src="/aeon-homepage/src/styles/mycloset.png" alt="MyCloset"></div>
+    <div class="brand-item"><img src="/aeon-homepage/src/styles/aeonshop.png" alt="Aeon Shop"></div>
+    <div class="brand-item"><img src="/aeon-homepage/src/styles/maxvalu.png" alt="MaxValu"></div>
+    <div class="brand-item"><img src="/aeon-homepage/src/styles/daiso.png" alt="Daiso"></div>
+    <div class="brand-item xem-them"><a href="#">XEM THÊM &raquo;</a></div>
+    <div class="brand-item"><img src="/aeon-homepage/src/styles/glam.png" alt="Glam Beautique"></div>
+    <div class="brand-item"><img src="/aeon-homepage/src/styles/petemo.png" alt="Petemo"></div>
+  </div>
+</section>
+
+<section class="store-locator-page">
+
+    <nav class="main-nav">
+        <a href="#" class="nav-item active">Tổng Quan</a>
+        <a href="#" class="nav-item">Bản Đồ Vị Trí</a>
+        <a href="#" class="nav-item">Bản Đồ Sàn</a>
+    </nav>
+
+    <div class="main-content-wrapper">
+
+        <div class="left-sidebar">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">🔍</button>
+            </div>
+            <div class="filter-options">
+                <div class="filter-item">Tỉnh/Thành phố</div>
+                <div class="filter-item">Loại hình siêu thị</div>
+            </div>
+
+            <div class="store-list">
+                <div class="store-item active"
+                    data-image-src="https://www.aeon.com.vn/wp-content/uploads/2018/05/aeon-tan-phu-introduction-1.jpeg"
+                    data-title="AEON TÂN PHÚ CELADON"
+                    data-contact="Liên hệ DVH 1800.888.886 - Zalo: 0366 565454"
+                    data-website="https://aeon.com.vn/tan-phu-celadon/"
+                    alt="AEON Tân Phú Celadon">
+                    <span class="location-icon">📍</span>
+                    <div class="store-details">
+                        <h4>AEON TÂN PHÚ CELADON</h4>
+                        <p>30 D. Tân Thắng, Phường Tân Sơn Nhì, Thành phố Hồ Chí Minh, Việt Nam</p>
+                        <p class="opening-hours">⌚ Mở cửa: 8AM - 10PM</p>
+                    </div>
+                </div>
+
+                <div class="store-item"
+                
+                    data-image-src="https://www.aeon.com.vn/wp-content/uploads/2018/05/aeon-binh-tan-introduction-2.png"
+                    data-title="AEON BÌNH TÂN"
+                    data-contact="Liên hệ DVH 1800.888.886 - Zalo: 0987 654321"
+                    data-website="https://aeon.com.vn/binh-tan/">
+                    <span class="location-icon">📍</span>
+                    <div class="store-details">
+                        <h4>AEON BÌNH TÂN</h4>
+                        <p>1 Đường Số 17A, Khu phố 11, Phường An Lạc, Thành phố Hồ Chí Minh, Việt Nam</p>
+                        <p class="opening-hours">⌚ Mở cửa: 8AM - 10PM</p>
+                    </div>
+                </div>
+
+                <div class="store-item"
+                    data-image-src="	https://www.aeon.com.vn/wp-content/uploads/2018/05/aeon-long-bien-introduction-2.jpg"
+                    data-title="AEON LONG BIÊN"
+                    data-contact="Liên hệ DVH 1800.888.886 - Zalo: 0123 456789"
+                    data-website="https://aeon.com.vn/long-bien/">
+                    <span class="location-icon">📍</span>
+                    <div class="store-details">
+                        <h4>AEON LONG BIÊN</h4>
+                        <p>27 Đường Cổ Linh, Phường Long Biên, Thành phố Hà Nội, Việt Nam</p>
+                        <p class="opening-hours">⌚ Mở cửa: 8AM - 10PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="store-hero">
+                <img id="hero-image" src="/aeon-homepage/src/styles/aeon-tan-phu-introduction-1.png" alt="AEON Tân Phú Celadon">
+                <div class="hero-overlay">
+                    <h1 id="store-title">AEON Tân Phú Celadon</h1>
+                    <p id="store-contact">Liên hệ DVH 1800.888.886 - Zalo: 0366 565454</p>
+                    <a id="store-website-btn" href="#" class="website-btn">WEBSITE</a>
+                </div>
+            </div>
+            <p class="store-description">Với diện tích hơn 70.000 m2, trung tâm thương mại AEON MALL Tân Phú Celadon là một trung tâm phức hợp với nhiều tiện ích hoàn hảo dành cho gia đình như siêu thị, cửa hàng mỹ phẩm, thời trang, đồ gia dụng, nhà hàng, rạp chiếu phim, khu vui chơi giải trí và các dịch vụ khác.</p>
+        </div>
+
+        
+
+        <div class="app-promo-box">
+            TẢI APP<br>NGAY
+        </div>
+
+    </div>
+
+</section>
+  
+    <section class="recruitment-section">
+        <div class="recruitment-wrapper">
+            <div class="recruitment-content">
+                <h2>AEON TUYỂN DỤNG</h2>
+                <h3>NUÔI DƯỠNG CHẤT RIÊNG - SỰ NGHIỆP TỎA SẮC</h3>
+                <p>
+                    AEON Việt Nam cam kết mang lại môi trường làm việc hạnh phúc và sự nghiệp bền vững – nơi bạn có thể nuôi dưỡng chất riêng của bản thân và tỏa sắc trong sự nghiệp dựa trên 3 trụ cột: Phát triển sự nghiệp bền vững, Văn hóa làm việc bền vững và Doanh nghiệp bền vững.
+                </p>
+                <a href="#" class="btn-primary">CÁC VỊ TRÍ TUYỂN DỤNG TẠI AEON VIỆT NAM</a>
+            </div>
+            <div class="recruitment-image-placeholder">
+                </div>
+        </div>
+    </section>
+
+    <section class="contact-info-section">
+        <div class="info-box main-office-box">
+            <h3>Văn Phòng Chính</h3>
+            <h4>CÔNG TY TNHH AEON VIỆT NAM</h4>
+            <p>Số 30 Đường Tân Thắng, Phường Tân Sơn Nhì, Thành phố Hồ Chí Minh</p>
+            <p>
+                <span class="schedule">Thứ 2 - Thứ 6 (8:30 - 17:30)</span>
+            </p>
+            <p>
+                <span class="phone">(028) 6269 2012</span>
+                <span class="phone">(028) 6288 7711</span>
+            </p>
+            <p>contact@aeon.com.vn</p>
+        </div>
+
+        <div class="info-box-grid">
+            <div class="info-box media-box">
+                <h3>Phòng truyền thông & đối ngoại</h3>
+                <p>(033) 217 9797</p>
+                <p>phongtruyenthong@aeon.com.vn</p>
+            </div>
+            
+            <div class="info-box ad-box">
+                <h3>Liên hệ quảng cáo</h3>
+                <p>028 6288 7711 - Ex: 859</p>
+                <p>booking.media@aeon.com.vn</p>
+                <a href="#" class="btn-link">aeon.com.vn/media</a>
+            </div>
+
+            <div class="info-box customer-service-box">
+                <h3>Phòng Chăm sóc khách hàng</h3>
+                <p>1800.888.886</p>
+                <p>contact@aeon.com.vn</p>
+            </div>
+
+            <div class="info-box hotline-box">
+                <h3>Hotline mua hàng</h3>
+                <p>1800.888.699</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="links-section">
+        <div class="links-box">
+            <h3>Liên hệ chào hàng cho AEON Việt Nam</h3>
+        </div>
+        <div class="links-box btn-group">
+            <a href="#" class="btn-primary">HỒ SƠ NĂNG LỰC CỦA CHÚNG TÔI</a>
+            <a href="#" class="btn-primary">CHÍNH SÁCH BẢO VỆ DỮ LIỆU CÁ NHÂN</a>
+        </div>
+    </section>
+<footer>
+    <div class="footer-container">
+        
+        <div class="footer-section footer-logo">
+            <img src="/aeon-homepage/src/styles/logo-footer-2.png" alt="AEON Logo">
+            <p>Planting Seeds of Growth<br>We are AEON</p>
+        </div>
+
+        <div class="footer-section footer-info">
+            <div class="footer-column">
+                <p>Công ty TNHH AEON Việt Nam thành lập và hoạt động theo Giấy chứng nhận đăng ký doanh nghiệp số 0311241512 do Uỷ ban nhân dân Thành phố Hồ Chí Minh cấp lần đầu tiên ngày 07/10/2011.</p>
+                <p>Điện thoại: (028) 62887711 | Lĩnh vực kinh doanh: Bán lẻ</p>
+            </div>
+            <div class="footer-column">
+                <p>Địa chỉ tên miền: www.aeon.com.vn</p>
+                <p>Người chịu trách nhiệm: Phòng Marketing</p>
+                <p>Bản quyền thuộc AEON Việt Nam.</p>
+                <p>Website: www.aeon.com.vn thuộc quyền sở hữu của Công ty TNHH AEON Việt Nam.</p>
+            </div>
+        </div>
+
+        <div class="footer-section footer-social-and-copyright">
+            <div class="social-icons">
+                <a href="#"><img src="/aeon-homepage/src/styles/Facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="/aeon-homepage/src/styles/Zalo.svg" alt="Zalo"></a>
+                <a href="#"><img src="/aeon-homepage/src/styles/YouTube.svg" alt="YouTube"></a>
+                <a href="#"><img src="/aeon-homepage/src/styles/Tiktok.svg" alt="TikTok"></a>
+            </div>
+            <div class="certification-logos">
+                <img src="/aeon-homepage/src/styles/dmca-badge-w100-2x1-01.png" alt="DMCA">
+                <img src="/aeon-homepage/src/styles/bct.png" alt="Bo Cong Thuong">
+            </div>
+            <p class="copyright">Copyright © AEON VIETNAM Co., Ltd | <a href="#">lại</a></p>
+            <div class="back-to-top-btn">↑</div>
+        </div>
+
+    </div>
+</footer>   
+    <!-- nút điều hướng -->
+  </div>
+</main>
+
+<script>
+// --- Mobile menu toggle ---
+const mobileToggle = document.getElementById('mobileToggle');
+const mainMenu = document.getElementById('mainMenu');
+if (mobileToggle && mainMenu) {
+  mobileToggle.addEventListener('click', () => mainMenu.classList.toggle('open'));
+}
+
+document.querySelectorAll('.menu > li > a').forEach(a => {
+  a.addEventListener('click', e => {
+    if (window.innerWidth <= 900 && a.nextElementSibling) {
+      e.preventDefault();
+      a.parentElement.classList.toggle('open');
+    }
+  });
+});
+
+const langBtn = document.getElementById('langBtn');
+if (langBtn) {
+  langBtn.addEventListener('click', () => {
+    alert('Chức năng đổi ngôn ngữ (demo).');
+  });
+}
+
+// --- Main Slider ---
+const slides = document.querySelectorAll(".slide");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const dotsContainer = document.getElementById("dots");
+let currentIndex = 0;
+
+if (slides.length > 0 && dotsContainer && prevBtn && nextBtn) {
+  // Tạo chấm tròn
+  slides.forEach((_, idx) => {
+    const dot = document.createElement("span");
+    dot.classList.add('dot');
+    if (idx === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => goToSlide(idx));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll("#dots .dot");
+
+  function updateSlider() {
+    document.querySelector(".slides").style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[currentIndex].classList.add("active");
+  }
+
+  function goToSlide(idx) {
+    currentIndex = idx;
+    updateSlider();
+  }
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlider();
+  });
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+  }, 5000);
+}
+
+// --- Promo Slider ---
+const promos = [
+  {
+    title: "THỨ 4 VUI VẺ <br> MUA THẬT RẺ",
+    desc: "Ưu đãi các mặt hàng tươi sống vào thứ 4 hàng tuần – duy nhất tại AEON",
+    img: "/aeon-homepage/src/styles/thu4.png",
+    link: "#"
+  },
+  {
+    title: "CUỐI TUẦN SALE KHỦNG",
+    desc: "Giảm giá đặc biệt cho thời trang và đồ gia dụng trong 3 ngày cuối tuần",
+    img: "/aeon-homepage/src/styles/online-shopping.png",
+    link: "#"
+  },
+  {
+    title: "MEMBER DAY",
+    desc: "Ưu đãi độc quyền cho khách hàng thành viên AEON",
+    img: "/aeon-homepage/src/styles/member-day.png",
+    link: "#"
+  }
+];
+
+let promoIndex = 0;
+const promoTitle = document.getElementById("promo-title");
+const promoDesc = document.getElementById("promo-desc");
+const promoLink = document.getElementById("promo-link");
+const promoImg = document.getElementById("promo-img");
+const promoPrev = document.querySelector("#promoSlider .promo-prev");
+const promoNext = document.querySelector("#promoSlider .promo-next");
+
+function showPromo(index) {
+  if (promoTitle && promoDesc && promoLink && promoImg) {
+    promoTitle.innerHTML = promos[index].title;
+    promoDesc.textContent = promos[index].desc;
+    promoLink.href = promos[index].link;
+    promoImg.src = promos[index].img;
+  }
+}
+
+if (promoPrev && promoNext) {
+  promoPrev.addEventListener("click", () => {
+    promoIndex = (promoIndex - 1 + promos.length) % promos.length;
+    showPromo(promoIndex);
+  });
+
+  promoNext.addEventListener("click", () => {
+    promoIndex = (promoIndex + 1) % promos.length;
+    showPromo(promoIndex);
+  });
+
+  setInterval(() => {
+    promoIndex = (promoIndex + 1) % promos.length;
+    showPromo(promoIndex);
+  }, 5000);
+
+  // Hiển thị slide đầu tiên
+  showPromo(promoIndex);
+}
+
+// --- Lifestyle Slider ---
+const lifestyleSlides = document.querySelector('.lifestyle-slider .slides');
+const lifestyleItems = document.querySelectorAll('.lifestyle-slider .slide');
+const lifestylePrevBtn = document.querySelector('.lifestyle-prev');
+const lifestyleNextBtn = document.querySelector('.lifestyle-next');
+let lifestyleIndex = 0;
+
+function showLifestyleSlide(n) {
+  if (lifestyleSlides && lifestyleItems.length > 0) {
+    lifestyleIndex = (n + lifestyleItems.length) % lifestyleItems.length;
+    lifestyleSlides.style.transform = `translateX(-${lifestyleIndex * 100}%)`;
+  }
+}
+
+if (lifestylePrevBtn && lifestyleNextBtn) {
+  lifestylePrevBtn.addEventListener('click', () => {
+    showLifestyleSlide(lifestyleIndex - 1);
+  });
+
+  lifestyleNextBtn.addEventListener('click', () => {
+    showLifestyleSlide(lifestyleIndex + 1);
+  });
+}
+
+// --- Store Locator ---
+document.addEventListener('DOMContentLoaded', function() {
+  const storeItems = document.querySelectorAll('.store-item');
+  const heroImage = document.getElementById('hero-image');
+  const storeTitle = document.getElementById('store-title');
+  const storeContact = document.getElementById('store-contact');
+  const storeWebsiteBtn = document.getElementById('store-website-btn');
+
+  if (storeItems.length > 0 && heroImage && storeTitle && storeContact && storeWebsiteBtn) {
+    storeItems.forEach(item => {
+      item.addEventListener('click', function() {
+        const currentActiveItem = document.querySelector('.store-item.active');
+        if (currentActiveItem) {
+          currentActiveItem.classList.remove('active');
+        }
+        this.classList.add('active');
+
+        const newImageSrc = this.dataset.imageSrc;
+        const newTitle = this.dataset.title;
+        const newContact = this.dataset.contact;
+        const newWebsite = this.dataset.website;
+
+        heroImage.src = newImageSrc;
+        storeTitle.textContent = newTitle;
+        storeContact.textContent = newContact;
+        storeWebsiteBtn.href = newWebsite;
+      });
+    });
+  }
+});
+
+</script>
+
+
+</body>
+</html>
