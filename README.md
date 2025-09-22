@@ -34,5 +34,3 @@ A static frontend website inspired by AEON Vietnam's design, built with HTML, CS
 - **JavaScript (ES6+)**: Interactive features
 - **Font Awesome**: Icons
 - **Google Fonts**: Typography
-
-## This project is for educational purposes. Please respect AEON Vietnam's brand and trademarks.
