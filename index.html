@@ -13,6 +13,8 @@
 
 <!-- Bootstrap Icons (cho icon home) -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -24,7 +26,7 @@
     <header class="header">
         <div class="header-container">
             <div class="logo">
-                <a href="#"><img src="./media/Ảnh chụp màn hình 2025-09-20 131647.png" alt="AEON Logo"></a>
+                <a href="#"><img src="./media/1.png" alt="AEON Logo"></a>
             </div>
             <div class="search-bar">
                 <input type="text" placeholder="Nhập nội dung tìm kiếm">
@@ -106,29 +108,36 @@
 
 
     <main class="main-content">
-        <div class="carousel-container">
-            <div class="carousel-slide">
-            <img src="./media/1.png" alt="Ưu đãi Trung thu">
+        <div id="aeonCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!-- Dấu chấm -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#aeonCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#aeonCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#aeonCarousel" data-bs-slide-to="2"></button>
+  </div>
 
-            </div>
-            <div class="carousel-slide">
-                <img src="./media/2.png" alt="Cẩm nang mua sắm">
-            </div>
-             <div class="carousel-slide">
-                <img src="./media/3.jpg" alt="Cẩm nang mua sắm">
-            </div>
-             <div class="carousel-slide">
-                <img src="./media/4.png" alt="Cẩm nang mua sắm">
-            </div>
-            <button class="prev-btn">&lt;</button>
-            <button class="next-btn">&gt;</button>
-            <div class="carousel-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
+  <!-- Ảnh -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./media/2.png" class="d-block w-100" alt="AEON Tân An">
+    </div>
+    <div class="carousel-item">
+      <img src="./media/3.png" class="d-block w-100" alt="Ưu đãi">
+    </div>
+    <div class="carousel-item">
+      <img src="./media/4.png" class="d-block w-100" alt="Khuyến mãi">
+    </div>
+  </div>
+
+  <!-- Mũi tên trái/phải -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#aeonCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#aeonCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
 
         <div class="shopping-guide">
             <div class="guide-header">
@@ -147,36 +156,37 @@
                 <p class="promo-subtitle">Dành riêng cho khách hàng doanh nghiệp – Duy nhất tại AEON – Miễn Phí Giao Hàng</p>
                 <button class="promo-button">XEM THÊM</button>
             </div>
-            <div class="promo-banner-container">
-                <div class="promo-banner-carousel">
-                     <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src="./media/1.png" alt="Ưu đãi Trung thu">
-            </div>
-            <div class="carousel-slide">
-                <img src="./media/2.png" alt="Cẩm nang mua sắm">
-            </div>
-            <div class="carousel-slide">
-                <img src="./media/3.jpg" alt="Cẩm nang mua sắm">
-            </div>
-            <div class="carousel-slide">
-                <img src="./media/4.png" alt="Cẩm nang mua sắm">
-            </div>
-        </div>
-   
-                    </div>
-            
-                <div class="carousel-nav-arrows">
-                    <button class="carousel-arrow prev-arrow">&lt;</button>
-                    <button class="carousel-arrow next-arrow">&gt;</button>
-                </div>
-                <div class="carousel-dots-bottom">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
+                   <div id="aeonCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!-- Dấu chấm -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#aeonCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#aeonCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#aeonCarousel" data-bs-slide-to="2"></button>
+  </div>
 
-            </div>
+  <!-- Ảnh -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./media/2.png" class="d-block w-100" alt="AEON Tân An">
+    </div>
+    <div class="carousel-item">
+      <img src="./media/3.png" class="d-block w-100" alt="Ưu đãi">
+    </div>
+    <div class="carousel-item">
+      <img src="./media/4.png" class="d-block w-100" alt="Khuyến mãi">
+    </div>
+  </div>
+
+  <!-- Mũi tên trái/phải -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#aeonCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#aeonCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+            
           
         </div>
     </section>
@@ -184,7 +194,7 @@
     <div class="events-container">
         
         <div class="event-card">
-            <img src="media/t1.png" alt="Khai trương AEON Tân An">
+            <img src="media/8.png" alt="Khai trương AEON Tân An">
             <div class="event-overlay">
                 <div class="event-text">
                     <h3>KHAI TRƯƠNG AEON TÂN AN</h3>
@@ -194,7 +204,7 @@
         </div>
 
         <div class="event-card">
-            <img src="media/t2.png" alt="Mừng AEON Tân An">
+            <img src="media/9.jpg" alt="Mừng AEON Tân An">
             <div class="event-overlay">
                 <div class="event-text">
                     <h3>MỪNG AEON TÂN AN</h3>
@@ -204,7 +214,7 @@
         </div>
 
         <div class="event-card">
-            <img src="media/t3.png" alt="Đúng Hẹn Tâm Trao">
+            <img src="media/10.png" alt="Đúng Hẹn Tâm Trao">
             <div class="event-overlay">
                 <div class="event-text">
                     <h3>ĐÚNG HẸN TÂM TRAO</h3>
@@ -214,7 +224,7 @@
         </div>
         
         <div class="event-card">
-            <img src="media/t4.png" alt="Lễ Hội Mẹ và Bé">
+            <img src="media/11.png" alt="Lễ Hội Mẹ và Bé">
             <div class="event-overlay">
                 <div class="event-text">
                     <h3>LỄ HỘI MẸ & BÉ</h3>
@@ -240,21 +250,21 @@
         <div class="service-cards">
             <div class="service-card">
                 <div class="card-content">
-                    <img src="media/v1.png" alt="Thanh toán không tiền mặt" class="card-img">
+                    <img src="media/12.png" alt="Thanh toán không tiền mặt" class="card-img">
                 
                 </div>
             </div>
 
             <div class="service-card">
                 <div class="card-content">
-                    <img src="media/v2.png" alt="Mua sắm online" class="card-img">
+                    <img src="media/13.png" alt="Mua sắm online" class="card-img">
                  
                 </div>
             </div>
 
             <div class="service-card">
                 <div class="card-content">
-                    <img src="media/v3.png" alt="Giao hàng và lắp đặt" class="card-img">
+                    <img src="media/14.png" alt="Giao hàng và lắp đặt" class="card-img">
               
                 </div>
             </div>
@@ -274,7 +284,7 @@
             <button class="lifestyle-arrow prev-arrow">&lt;</button>
             <div class="lifestyle-carousel">
                 <div class="lifestyle-card">
-                    <img src="media/a1.jpg" alt="Phong cách sống 1">
+                    <img src="media/15.jpg" alt="Phong cách sống 1">
                     <div class="card-overlay">
                         <div class="card-text">
                             <h3>Tên bài viết 1</h3>
@@ -283,7 +293,7 @@
                     </div>
                 </div>
                 <div class="lifestyle-card active">
-                    <img src="media/a2.jpg" alt="Phong cách sống 2">
+                    <img src="media/16.jpg" alt="Phong cách sống 2">
                     <div class="card-overlay">
                         <div class="card-text">
                             <h3>Tên bài viết 2</h3>
@@ -292,7 +302,7 @@
                     </div>
                 </div>
                 <div class="lifestyle-card">
-                    <img src="media/a3.jpg" alt="Phong cách sống 3">
+                    <img src="media/17.jpg" alt="Phong cách sống 3">
                     <div class="card-overlay">
                         <div class="card-text">
                             
@@ -301,7 +311,7 @@
                     </div>
                 </div>
                 <div class="lifestyle-card">
-                    <img src="media/a3.jpg" alt="Phong cách sống 3">
+                    <img src="media/18.jpg" alt="Phong cách sống 3">
                     <div class="card-overlay">
                         <div class="card-text">
                             
@@ -339,21 +349,21 @@
                 <div class="news-carousel">
                     <div class="news-page active">
                         <div class="news-card">
-                            <img src="media/tt1.jpg" alt="AEON Việt Nam triển khai khai không túi ni-lông">
+                            <img src="media/19.jpg" alt="AEON Việt Nam triển khai khai không túi ni-lông">
                             <div class="card-details">
                                 <h4>AEON VIỆT NAM TRIỂN KHAI KHÔNG TÚI NI-LÔNG 2025 TẠI 3...</h4>
                                 <span class="news-date">03.07.2025</span>
                             </div>
                         </div>
                         <div class="news-card">
-                            <img src="media/tt2.jpg" alt="Cuộc thi hùng biện tiếng Anh">
+                            <img src="media/20.jpg" alt="Cuộc thi hùng biện tiếng Anh">
                             <div class="card-details">
                                 <h4>CUỘC THI HÙNG BIỆN TIẾNG ANH 2025: CHẮP CÁNH ƯỚC MƠ, GIEO...</h4>
                                 <span class="news-date">25.06.2025</span>
                             </div>
                         </div>
                         <div class="news-card">
-                            <img src="media/tt3.jpg" alt="AEON Việt Nam cùng cộng đồng nhặt rác">
+                            <img src="media/21.jpg" alt="AEON Việt Nam cùng cộng đồng nhặt rác">
                             <div class="card-details">
                                 <h4>AEON VIỆT NAM CÙNG CỘNG ĐỒNG NHẶT RÁC – GIEO MẦM...</h4>
                                 <span class="news-date">05.06.2025</span>
@@ -363,21 +373,21 @@
                     
                     <div class="news-page">
                         <div class="news-card">
-                             <img src="media/tt4.png" alt="Tin tức trang 2 ảnh 1">
+                             <img src="media/22.png" alt="Tin tức trang 2 ảnh 1">
                              <div class="card-details">
                                 <h4>TIÊU ĐỀ BÀI VIẾT TRANG 2 SỐ 1</h4>
                                 <span class="news-date">01.06.2025</span>
                             </div>
                         </div>
                         <div class="news-card">
-                             <img src="media/tt5.jpg" alt="Tin tức trang 2 ảnh 2">
+                             <img src="media/23.jpg" alt="Tin tức trang 2 ảnh 2">
                              <div class="card-details">
                                 <h4>TIÊU ĐỀ BÀI VIẾT TRANG 2 SỐ 2</h4>
                                 <span class="news-date">28.05.2025</span>
                             </div>
                         </div>
                         <div class="news-card">
-                            <img src="media/tt6.jpg" alt="Tin tức trang 2 ảnh 3">
+                            <img src="media/24.jpg" alt="Tin tức trang 2 ảnh 3">
                             <div class="card-details">
                                 <h4>TIÊU ĐỀ BÀI VIẾT TRANG 2 SỐ 3</h4>
                                 <span class="news-date">25.05.2025</span>
@@ -418,70 +428,70 @@
 
         <div class="brands-grid">
             <a href="#" class="brand-item">
-                <img src="media/12.png" alt="TOPVALU">
+                <img src="media/25.png" alt="TOPVALU">
                 <div class="brand-overlay">
                     <span class="overlay-text">XEM THÊM >>></span>
                 </div>
             </a>
             
             <a href="#" class="brand-item">
-                <img src="media/13.png" alt="HOME COORDY">
+                <img src="media/26.png" alt="HOME COORDY">
                 <div class="brand-overlay">
                     <span class="overlay-text">XEM THÊM >>></span>
                 </div>
             </a>
 
             <a href="#" class="brand-item">
-                <img src="media/14.png" alt="GIORNO MIMOSA">
+                <img src="media/27.png" alt="GIORNO MIMOSA">
                 <div class="brand-overlay">
                     <span class="overlay-text">XEM THÊM >>></span>
                 </div>
             </a>
             
             <a href="#" class="brand-item">
-                <img src="media/15.png" alt="MYCLOSET">
+                <img src="media/28.png" alt="MYCLOSET">
                 <div class="brand-overlay">
                     <span class="overlay-text">XEM THÊM >>></span>
                 </div>
             </a>
             
             <a href="#" class="brand-item">
-                <img src="media/16.png" alt="AEON ESHOP">
+                <img src="media/29.png" alt="AEON ESHOP">
                 <div class="brand-overlay">
                     <span class="overlay-text">XEM THÊM >>></span>
                 </div>
             </a>
             
             <a href="#" class="brand-item">
-                <img src="media/17.png" alt="AEON MaxValu Express">
+                <img src="media/30.png" alt="AEON MaxValu Express">
                 <div class="brand-overlay">
                     <span class="overlay-text">XEM THÊM >>></span>
                 </div>
             </a>
             
             <a href="#" class="brand-item">
-                <img src="media/18.png" alt="Daiso">
+                <img src="media/31.png" alt="Daiso">
                 <div class="brand-overlay">
                     <span class="overlay-text">XEM THÊM >>></span>
                 </div>
             </a>
             
             <a href="#" class="brand-item">
-                <img src="media/19.png" alt="AEON Bicycle Shop">
+                <img src="media/32.png" alt="AEON Bicycle Shop">
                 <div class="brand-overlay">
                     <span class="overlay-text">XEM THÊM >>></span>
                 </div>
             </a>
             
             <a href="#" class="brand-item">
-                <img src="media/13.png" alt="Glam Boutique">
+                <img src="media/33.png" alt="Glam Boutique">
                 <div class="brand-overlay">
                     <span class="overlay-text">XEM THÊM >>></span>
                 </div>
             </a>
             
             <a href="#" class="brand-item">
-                <img src="media/14.png" alt="Petemo Petlife Store">
+                <img src="media/34.png" alt="Petemo Petlife Store">
                 <div class="brand-overlay">
                     <span class="overlay-text">XEM THÊM >>></span>
                 </div>
@@ -646,7 +656,7 @@
 
             <div class="col-lg-6">
                 <div class="illustration-box text-center p-4 rounded-3 h-100 position-relative">
-                    <img src="media/dd1 (1).png" alt="AEON illustration" class="img-fluid">
+                    <img src="media/36.png" alt="AEON illustration" class="img-fluid">
                     <div class="d-flex justify-content-center gap-3">
                         <button class="btn btn-secondary rounded-pill px-4 py-2"><i class="fas fa-share-alt"></i> CHIA SẺ CÙNG AEON</button>
                         <button class="btn btn-secondary rounded-pill px-4 py-2"><i class="fas fa-exchange-alt"></i> ĐỔI TRẢ/HOÀN TIỀN</button>
@@ -657,49 +667,50 @@
     </div>
 </section>
 <footer class="footer">
-  <div class="footer-container">
-    <!-- Cột 1 -->
-    <div class="footer-col">
-      <img src="media/logo-footer-1.png" alt="Planting Seeds of Growth" class="footer-logo">
-      <img src="media/logo-footer-2.png" alt="AEON Logo" class="footer-logo">
-      <p>
-        Công ty TNHH Aeon Việt Nam thành lập và hoạt động theo Giấy chứng nhận đăng ký doanh nghiệp số 0311241512
-        do Ủy ban nhân dân Thành phố Hồ Chí Minh cấp lần đầu tiên ngày 07/10/2011.
-      </p>
-      <p>Điện thoại: (028) 62887711 | Lĩnh vực kinh doanh: Bán lẻ</p>
-    </div>
-
-    <!-- Cột 2 -->
-    <div class="footer-col">
-      <p>
-        Địa chỉ tên miền: www.aeon.com.vn <br>
-        Người chịu trách nhiệm: Phòng Marketing <br>
-        Bản quyền thuộc Aeon Việt Nam. <br>
-        Website: www.aeon.com.vn thuộc quyền sở hữu của Công ty TNHH Aeon Việt Nam.
-      </p>
-    </div>
-
-    <!-- Cột 3 -->
-    <div class="footer-col">
-      <div class="footer-social">
-        <a href="#"><img src="media/Facebook.svg" alt="Facebook"></a>
-        <a href="#"><img src="media/Instagram.svg" alt="Instagram"></a>
-        <a href="#"><img src="media/Zalo.svg" alt="Zalo"></a>
-        <a href="#"><img src="media/YouTube.svg" alt="YouTube"></a>
-        <a href="#"><img src="media/Tiktok.svg" alt="TikTok"></a>
+  <div class="container">
+    <div class="row">
+      <!-- Cột trái: Logo + slogan -->
+      <div class="col-md-4 footer-left">
+        <img src="./media/zzz.png" alt="AEON Logo" class="footer-logo">
+        <p>
+          Công ty TNHH Aeon Việt Nam thành lập và hoạt động theo Giấy chứng nhận đăng ký doanh nghiệp
+          số 0311241512 do Ủy ban nhân dân Thành phố Hồ Chí Minh cấp lần đầu tiên ngày 07/10/2011. <br>
+          Điện thoại: (028) 62887711 | Lĩnh vực kinh doanh: Bán lẻ
+        </p>
       </div>
-      <div class="footer-certificates">
-        <img src="media/dmca.png" alt="DMCA Protected">
-        <img src="media/dathongbao.png" alt="Đã thông báo Bộ Công Thương">
+
+      <!-- Cột giữa: Thông tin công ty -->
+      <div class="col-md-4 footer-center">
+        <p>
+          Địa chỉ tên miền: <a href="https://www.aeon.com.vn">www.aeon.com.vn</a><br>
+          Người chịu trách nhiệm: Phòng Marketing<br>
+          Bản quyền thuộc Aeon Việt Nam. <br>
+          Website: <a href="https://www.aeon.com.vn">www.aeon.com.vn</a> thuộc quyền sở hữu của Công ty TNHH Aeon Việt Nam.
+        </p>
+      </div>
+
+      <!-- Cột phải: MXH + chứng nhận -->
+      <div class="col-md-4 footer-right">
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-chat-dots"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-tiktok"></i></a>
+        </div>
+        <div class="certificates">
+          <img src="./media/a1.png" alt="DMCA Protected">
+          <img src="./media/a2.png" alt="Bộ Công Thương">
+        </div>
+        <p class="copyright">Copyright © AEON VIETNAM Co., Ltd</p>
       </div>
     </div>
   </div>
 
-  <div class="footer-bottom">
-    <p>Copyright © AEON VIETNAM Co., Ltd</p>
-    <button class="scroll-top-btn">↑</button>
-  </div>
+  <!-- nút scroll top -->
+  <a href="#" class="scroll-top"><i class="bi bi-arrow-up"></i></a>
 </footer>
+
 
 
     <script src="script.js"></script>
